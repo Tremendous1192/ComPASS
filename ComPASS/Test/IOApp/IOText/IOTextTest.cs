@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tremendous1192.SelfEmployed.CoMPASS.IOApp
+using Tremendous1192.SelfEmployed.CoMPASS.IOApp;
+
+namespace Test.Tremendous1192.SelfEmployed.CoMPASS.IOApp
 {
     public partial class IOTextTest
     {
