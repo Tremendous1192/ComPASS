@@ -17,7 +17,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 		public Matrix(int row, int column)
 		{
 
-			if (row < 0 || column < 0)
+			if (row < 1 || column < 1)
 			{
 				throw new FormatException("行数と列数の指定が不適切です");
 			}
@@ -39,7 +39,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 		/// <param name="initialValue"></param>
 		public Matrix(int row, int column, T[] initialValue)
 		{
-			if (row < 0 || column < 0 || row * column != initialValue.Length)
+			if (row < 1 || column < 1 || row * column != initialValue.Length)
 			{
 				throw new FormatException("行数と列数の指定が不適切です");
 			}

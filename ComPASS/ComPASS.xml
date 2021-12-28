@@ -70,6 +70,65 @@
             <param name="writtenText"></param>
             <returns></returns>
         </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.Average(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            計画行列(行ベクトルの集合)の、平均ベクトルを返す。
+            </summary>
+            <param name="designMatrix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.InverseVarianceCovarianceMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            分散・共分散行列の逆行列を返す。
+            </summary>
+            <param name="designMatrix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.VarianceCovarianceMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            分散・共分散行列を返す。
+            </summary>
+            <param name="designMatrix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.MakeVectorForLinerRegression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+            <summary>
+            線形回帰用のベクトルを生成する。
+            </summary>
+            <param name="vectorWithoutConstant"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.MakeDesignMatrixWithConstant(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            計画行列を生成する
+            </summary>
+            <param name="matrixWithoutConstant"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+            <summary>
+            回帰直線の係数を学習する
+            </summary>
+            <param name="dsignMatrixWithoutConctant"></param>
+            <param name="outputYSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+            <summary>
+            回帰直線の値を予測する
+            </summary>
+            <param name="dsignMatrixWithoutConctant"></param>
+            <param name="coefficientW"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+            <summary>
+            回帰直線の値を予測する
+            </summary>
+            <param name="vectorWithoutConctant"></param>
+            <param name="coefficientW"></param>
+            <returns></returns>
+        </member>
         <member name="T:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1">
             <summary>
             行列計算用のクラス。行列の要素は2重配列[ , ]で表す。 
@@ -125,6 +184,19 @@
             </summary>
             <param name="matrix01"></param>
             <param name="matrix02"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.Determinant">
+            <summary>
+            行列式を返す。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.Determinant(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            行列式を返す。
+            </summary>
+            <param name="matrix"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.Inverse">
@@ -391,6 +463,19 @@
             <param name="matrixRightSide"></param>
             <returns></returns>
         </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Norm_L2">
+            <summary>
+            ベクトルのL2ノルムを返す。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Norm_L2(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+            <summary>
+            ベクトルのL2ノルムを返す。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Subtract(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
             <summary>
             ベクトルの減算を行う。
@@ -426,48 +511,118 @@
             ベクトルの次元
             </summary>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.MakeVectorForLinerRegression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.GaussianKernel`1.SetDesignMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
-            線形回帰用のベクトルを生成する。
+            計画行列の分散共・分散行列の逆行列をセットする。
             </summary>
-            <param name="vectorWithoutConstant"></param>
+            <param name="designMatrix"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.GaussianKernel`1.SetVarianceCovarianceMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            計画行列の分散共・分散行列の逆行列をセットする。
+            </summary>
+            <param name="varianceCovarianceMatrix"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.GaussianKernel`1.Calculate(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+            <summary>
+            カーネル関数を計算する。
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.MakeDesignMatrixWithConstant(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SimplePolynomialKernel`1.SetDesignMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
-            計画行列を生成する
+            計画行列の分散共・分散行列の逆行列をセットする。
+            Simple Polynomial Kernel はこの逆行列を使用しないので、何も処理しない。
             </summary>
-            <param name="matrixWithoutConstant"></param>
+            <param name="designMatrix"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SimplePolynomialKernel`1.SetVarianceCovarianceMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            計画行列の分散共・分散行列の逆行列をセットする。
+            Simple Polynomial Kernel はこの逆行列を使用しないので、何も処理しない。
+            </summary>
+            <param name="varianceCovarianceMatrix"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SimplePolynomialKernel`1.Calculate(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+            <summary>
+            カーネル関数を計算する。
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="T:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1">
             <summary>
-            回帰直線の係数を学習する
+            サポートベクトルマシンの計算を行うクラス
             </summary>
-            <param name="dsignMatrixWithoutConctant"></param>
-            <param name="outputYSet"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1.Classify(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+            <summary>
+            行ベクトルの識別を行う .
+            Perform row vector identification .
+            </summary>
+            <param name="labelsY"></param>
+            <param name="designMatrixWithoutConstant"></param>
+            <param name="iKernel"></param>
+            <param name="CoefficientsA"></param>
+            <param name="rowVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},System.Int32)">
             <summary>
-            回帰直線の値を予測する
+            係数Aを学習する .
+            Learn coefficient A .
             </summary>
-            <param name="dsignMatrixWithoutConctant"></param>
-            <param name="coefficientW"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
-            <summary>
-            回帰直線の値を予測する
-            </summary>
-            <param name="vectorWithoutConctant"></param>
-            <param name="coefficientW"></param>
+            <param name="labelsY"></param>
+            <param name="designMatrixWithoutConstant"></param>
+            <param name="iKernel"></param>
+            <param name="hyperParameterExponent"></param>
             <returns></returns>
         </member>
         <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.IOApp.IOTextTest.TestReadTextSplitedByCommaJagArray(System.Double)">
             <summary>
             1次元配列 double[3] をカンマ区切りstringに変換して保存して、その後読み込む.
             </summary>
+        </member>
+        <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrixTest.VarianceCovarianceMatrixTest">
+            <summary>
+            分散共分散のテスト関数
+            </summary>
+        </member>
+        <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp.InterfaceTest.Study01">
+            <summary>
+            interfaceの勉強用の関数
+            </summary>
+        </member>
+        <member name="T:Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp.IShapes`1">
+            <summary>
+            引用 - C# Programming: Creating and Using a Generic Interface。
+            http://www.functionx.com/csharp40/interfaces/cugi.htm
+            。interfaceとgenericの勉強のために、引用した。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp.GeometricShapes`1">
+            <summary>
+            引用 - C# Programming: Creating and Using a Generic Interface
+            http://www.functionx.com/csharp40/interfaces/cugi.htm
+            。interfaceとgenericの勉強のために、引用した。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp.iInterfaceTest`1">
+            <summary>
+            interfaceのテストinterface
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp.TestInterfaceClass`1">
+            <summary>
+            interfaceのテストclass
+            </summary>
+            <typeparam name="T"></typeparam>
         </member>
         <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegressionTest.Test">
             <summary>

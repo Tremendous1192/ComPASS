@@ -14,7 +14,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 		/// <param name="dimension"></param>
 		public Vector(int dimension)
 		{
-			if (dimension < 0)
+			if (dimension < 1)
 			{
 				throw new FormatException("次元の指定が不適切です");
 			}
