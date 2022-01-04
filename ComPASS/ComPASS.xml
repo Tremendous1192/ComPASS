@@ -70,6 +70,371 @@
             <param name="writtenText"></param>
             <returns></returns>
         </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.result">
+            <summary>
+            計算結果
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.Result">
+            <summary>
+            計算結果をもう一度取得する
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.ud1">
+            <summary>
+            一様分布
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.ud2">
+            <summary>
+            一様分布
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.seed1">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.seed2">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            constructor
+            </summary>
+            <param name="the_seed_1"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.SetSeed(System.UInt32,System.UInt32)">
+            <summary>
+            種を設定する
+            </summary>
+            <param name="the_seed_1"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.NextDouble">
+            <summary>
+            乱数を生成する
+            位置母数(location parameter) 0
+            尺度母数(scale parameter) 1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.CauchyDistribution.NextDouble(System.Double,System.Double)">
+            <summary>
+            乱数を生成する
+            位置母数(location parameter) location
+            尺度母数(scale parameter) scale
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.result">
+            <summary>
+            計算結果
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.Result">
+            <summary>
+            計算結果をもう一度取得する
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.ud1">
+            <summary>
+            一様分布
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.ud2">
+            <summary>
+            一様分布
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.seed1">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.seed2">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.even">
+            <summary>
+            計算回数
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            constructor
+            </summary>
+            <param name="the_seed"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.SetSeed(System.UInt32,System.UInt32)">
+            <summary>
+            種を設定する
+            </summary>
+            <param name="the_seed_1"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.NextDouble">
+            <summary>
+            乱数を生成する
+            標準偏差 1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.HalfNormalDistribution.NextDouble(System.Double)">
+            <summary>
+            乱数を生成する
+            標準偏差 std
+            </summary>
+            <param name="std"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tremendous1192.SelfEmployed.CoMPASS.MathApp.IRandomNumber">
+            <summary>
+            乱数を生成するインターフェース。
+            基本となる一様乱数はメルセンヌ・ツイスタに従って生成される。
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.result">
+            <summary>
+            計算結果
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.Result">
+            <summary>
+            計算結果をもう一度取得する
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.ud1">
+            <summary>
+            一様分布
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.ud2">
+            <summary>
+            一様分布
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.seed1">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.seed2">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.even">
+            <summary>
+            計算回数
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            constructor
+            </summary>
+            <param name="the_seed_1"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.SetSeed(System.UInt32,System.UInt32)">
+            <summary>
+            種を設定する
+            </summary>
+            <param name="the_seed_1"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.NextDouble">
+            <summary>
+            乱数を生成する
+            平均値 0
+            標準偏差 1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LogNormalDistribution.NextDouble(System.Double,System.Double)">
+            <summary>
+            乱数を生成する
+            平均値 average
+            標準偏差 std
+            </summary>
+            <param name="average"></param>
+            <param name="std"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.result">
+            <summary>
+            計算結果
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.Result">
+            <summary>
+            計算結果をもう一度取得する
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.ud1">
+            <summary>
+            一様分布
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.ud2">
+            <summary>
+            一様分布
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.seed1">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.seed2">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.even">
+            <summary>
+            計算回数
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            constructor
+            </summary>
+            <param name="the_seed_1"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.SetSeed(System.UInt32,System.UInt32)">
+            <summary>
+            種を設定する
+            </summary>
+            <param name="the_seed_1"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.NextDouble">
+            <summary>
+            標準正規分布に従う乱数を生成する
+            平均値 0
+            標準偏差 1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.NormalDistribution.NextDouble(System.Double,System.Double)">
+            <summary>
+            乱数を生成する
+            平均値 average
+            標準偏差 std
+            </summary>
+            <param name="average"></param>
+            <param name="std"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.result">
+            <summary>
+            計算結果
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.Result">
+            <summary>
+            計算結果をもう一度取得する
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.seed">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.X">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.Y">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.Z">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.W">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.T">
+            <summary>
+            種
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.counterArray">
+            <summary>
+            計算回数を記録する配列.
+            乱数列を使い切ることはほぼないので、使用しない.
+            0.1ミリ秒に1度乱数を生成するとして, 1年間乱数を生成し続けるとしても、2^39個の乱数列しか使用しない。
+            メルセンヌツイスターの周期は2^19937-1個であるため, 十二分に余裕がある.
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.#ctor(System.UInt32)">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.SetSeed(System.UInt32)">
+            <summary>
+            種を設定する
+            </summary>
+            <param name="seed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.NextDouble">
+            <summary>
+            乱数を生成する
+            値域  :[ 0 , 1 ]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.NextDouble(System.Double,System.Double)">
+            <summary>
+            乱数を生成する
+            値域  :[ min , max ]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.UniformDistribution.CountUp">
+            <summary>
+            メルセンヌツイスターの周期2^19937-1 回毎に種をリセットする
+            </summary>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.Average(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             計画行列(行ベクトルの集合)の、平均ベクトルを返す。
@@ -91,6 +456,32 @@
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+            <summary>
+            回帰直線の係数を学習する
+            </summary>
+            <param name="dsignMatrixWithoutConctant"></param>
+            <param name="outputSetY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.RidgeLearn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},`0)">
+            <summary>
+            Ridge回帰で回帰直線の係数を学習する.
+            </summary>
+            <param name="dsignMatrixWithoutConctant"></param>
+            <param name="outputSetY"></param>
+            <param name="lambda"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.LASSOLearn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},`0)">
+            <summary>
+            LASSSO回帰で回帰直線の係数を学習する
+            </summary>
+            <param name="dsignMatrixWithoutConctant"></param>
+            <param name="outputSetY"></param>
+            <param name="lambda"></param>
+            <returns></returns>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.MakeVectorForLinerRegression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
             <summary>
             線形回帰用のベクトルを生成する。
@@ -103,14 +494,6 @@
             計画行列を生成する
             </summary>
             <param name="matrixWithoutConstant"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
-            <summary>
-            回帰直線の係数を学習する
-            </summary>
-            <param name="dsignMatrixWithoutConctant"></param>
-            <param name="outputYSet"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
