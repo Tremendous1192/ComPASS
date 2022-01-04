@@ -14,7 +14,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
         {
 
             Matrix<double> designMatrix = new Matrix<double>(6, 2);
-            Vector<double> labelsY = new Vector<double>(6);
+            ColumnVector<double> labelsY = new ColumnVector<double>(6);
 
             //データ点の配置(x-y平面を想像してください)
             // 1 -1 1

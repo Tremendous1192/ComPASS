@@ -4,16 +4,16 @@ using System.Text;
 
 namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 {
-    public partial class Vector<T>
+    public partial class ColumnVector<T>
         where T : struct
     {
 
         /// <summary>
-        /// ベクトルの内積
+        /// ベクトルの内積を返す.
         /// </summary>
         /// <param name="otherVector"></param>
         /// <returns></returns>
-        public T MultiplyInnerProduct(Vector<T> otherVector)
+        public T MultiplyInnerProduct(ColumnVector<T> otherVector)
         {
 
             if (this.Dimension != otherVector.Dimension)
@@ -29,12 +29,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
 
         /// <summary>
-        /// ベクトルの内積を行う。演算子 "*" のオーバーロード
+        /// ベクトルの内積を返す.演算子 "*" のオーバーロード
         /// </summary>
         /// <param name="vector01"></param>
         /// <param name="vector02"></param>
         /// <returns></returns>
-        public static T operator *(Vector<T> vector01, Vector<T> vector02)
+        public static T operator *(ColumnVector<T> vector01, ColumnVector<T> vector02)
         {
             return vector01.MultiplyInnerProduct(vector02);
         }
@@ -46,7 +46,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="vector01"></param>
         /// <param name="vector02"></param>
         /// <returns></returns>
-        public static T Multiply(Vector<T> vector01, Vector<T> vector02)
+        public static T Multiply(ColumnVector<T> vector01, ColumnVector<T> vector02)
         {
             if (vector01.Dimension != vector02.Dimension)
             {

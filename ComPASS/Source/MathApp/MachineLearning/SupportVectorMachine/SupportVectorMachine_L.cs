@@ -19,7 +19,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="iKernel"></param>
         /// <param name="hyperParameterExponent"></param>
         /// <returns></returns>
-        public static Vector<T> Learn(Vector<T> labelsY, Matrix<T> designMatrixWithoutConstant, IKernel<T> iKernel, int hyperParameterExponent)
+        public static ColumnVector<T> Learn(ColumnVector<T> labelsY, Matrix<T> designMatrixWithoutConstant, IKernel<T> iKernel, int hyperParameterExponent)
         {
             //カーネルのセット
             iKernel.SetDesignMatrix(designMatrixWithoutConstant);
@@ -35,10 +35,10 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             //カーネルを計算しておく
             for (int j = 0; j < designMatrixWithoutConstant.RowCount; j++)
             {
-                Vector<T> r_j = designMatrixWithoutConstant.PickUpRowVector(j);
+                RowVector<T> r_j = designMatrixWithoutConstant.PickUpRowVector(j);
                 for (int k = j; k < designMatrixWithoutConstant.RowCount; k++)
                 {
-                    Vector<T> r_k = designMatrixWithoutConstant.PickUpRowVector(k);
+                    RowVector<T> r_k = designMatrixWithoutConstant.PickUpRowVector(k);
 
                     var k_jk = iKernel.Calculate(r_j, r_k);
 
@@ -49,7 +49,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
 
             //係数の初期化
-            Vector<T> coefficientsA = new Vector<T>(designMatrixWithoutConstant.RowCount);
+            ColumnVector<T> coefficientsA = new ColumnVector<T>(designMatrixWithoutConstant.RowCount);
             T initial_a = (dynamic)0;
             for (int j = 0; j < coefficientsA.Dimension; j++)
             { coefficientsA[j] = initial_a; }
@@ -67,11 +67,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             for (int j = 0; j < designMatrixWithoutConstant.RowCount; j++)
             {
                 //計画行列からj行目のベクトルを取り出す
-                Vector<T> r_j = designMatrixWithoutConstant.PickUpRowVector(j);
+                RowVector<T> r_j = designMatrixWithoutConstant.PickUpRowVector(j);
                 for (int k = j + 1; k < designMatrixWithoutConstant.RowCount; k++)
                 {
                     //計画行列からk行目のベクトルを取り出す
-                    Vector<T> r_k = designMatrixWithoutConstant.PickUpRowVector(k);
+                    RowVector<T> r_k = designMatrixWithoutConstant.PickUpRowVector(k);
 
                     //ベクトルr_j r_kの予測計算を行う
                     predict_j = (dynamic)0;

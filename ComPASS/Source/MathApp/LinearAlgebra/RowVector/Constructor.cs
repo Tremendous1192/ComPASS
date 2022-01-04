@@ -4,15 +4,15 @@ using System.Text;
 
 namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 {
-    public partial class Vector<T>
-        where T : struct
-    {
+	public partial class RowVector<T>
+		where T : struct
+	{
 
 		/// <summary>
 		/// コンストラクター。ゼロベクトルを生成する。
 		/// </summary>
 		/// <param name="dimension"></param>
-		public Vector(int dimension)
+		public RowVector(int dimension)
 		{
 			if (dimension < 1)
 			{
@@ -28,7 +28,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 		/// コンストラクター。1次元配列をベクトルの初期値とする。
 		/// </summary>
 		/// <param name="initialValue"></param>
-		public Vector(T[] initialValue)
+		public RowVector(T[] initialValue)
 		{
 			vector = new T[initialValue.Length];
 			for (int i = 0; i < initialValue.Length; i++)
@@ -42,8 +42,8 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 		/// コンストラクター。リストをベクトルの初期値とする。
 		/// </summary>
 		/// <param name="initialValue"></param>
-		public Vector(List<T> initialValue)
-        {
+		public RowVector(List<T> initialValue)
+		{
 			vector = new T[initialValue.Count];
 			for (int i = 0; i < initialValue.Count; i++)
 			{

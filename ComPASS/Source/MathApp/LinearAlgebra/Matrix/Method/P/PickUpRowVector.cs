@@ -13,13 +13,13 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="row"></param>
         /// <returns></returns>
-        public Vector<T> PickUpRowVector(int row){
+        public RowVector<T> PickUpRowVector(int row){
             if (row < 0 || this.RowCount <= row){
                 throw new FormatException("行の指定が不適切です");
             }
 
 
-            Vector<T> result = new Vector<T>(this.ColumnCount);
+            RowVector<T> result = new RowVector<T>(this.ColumnCount);
             for (int j = 0; j < this.ColumnCount; j++){
                 result[j] = this[row, j];
             }
@@ -33,14 +33,14 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="matrix"></param>
         /// <param name="row"></param>
         /// <returns></returns>
-        public static Vector<T> PickUpRowVector(Matrix<T> matrix, int row){
+        public static RowVector<T> PickUpRowVector(Matrix<T> matrix, int row){
             if (row < 0 || matrix.RowCount <= row)
             {
                 throw new FormatException("行の指定が不適切です");
             }
 
 
-            Vector<T> result = new Vector<T>(matrix.ColumnCount);
+            RowVector<T> result = new RowVector<T>(matrix.ColumnCount);
             for (int j = 0; j < matrix.ColumnCount; j++)
             {
                 result[j] = matrix[row, j];

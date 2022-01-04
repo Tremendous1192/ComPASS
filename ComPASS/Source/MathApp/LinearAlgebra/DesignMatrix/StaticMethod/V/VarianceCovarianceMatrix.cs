@@ -17,7 +17,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
             //Cov(x,y) = E[xy] - E[x]E[y] を計算する。
 
-            Vector<T> average = DesignMatrix<T>.Average(designMatrix);
+            RowVector<T> average = DesignMatrix<T>.Average(designMatrix);
 
             Matrix<T> varianceCovarianceMatrix = new Matrix<T>(designMatrix.ColumnCount, designMatrix.ColumnCount);
 

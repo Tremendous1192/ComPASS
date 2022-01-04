@@ -14,9 +14,9 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="vectorWithoutConstant"></param>
         /// <returns></returns>
-        public static Vector<T> MakeVectorForLinerRegression(Vector<T> vectorWithoutConstant)
+        public static RowVector<T> MakeVectorForLinerRegression(RowVector<T> vectorWithoutConstant)
         {
-            var vector = new Vector<T>(vectorWithoutConstant.Dimension + 1);
+            var vector = new RowVector<T>(vectorWithoutConstant.Dimension + 1);
 
             vector[0] = (dynamic)1;
             for (int i = 0; i < vectorWithoutConstant.Dimension; i++)

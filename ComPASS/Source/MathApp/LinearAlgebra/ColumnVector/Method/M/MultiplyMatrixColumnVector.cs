@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 {
-    public partial class Vector<T>
+    public partial class ColumnVector<T>
         where T : struct
     {
         /// <summary>
@@ -12,11 +12,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="matrixLeftSide"></param>
         /// <returns></returns>
-        public Vector<T> MultiplyMatrixVector(Matrix<T> matrixLeftSide)
+        public ColumnVector<T> MultiplyMatrixVector(Matrix<T> matrixLeftSide)
         {
             if (this.Dimension != matrixLeftSide.ColumnCount)
             {
-                throw new FormatException("行列の列数と、ベクトルの次元が揃っていません");
+                throw new FormatException("行列の列数と、列ベクトルの次元が揃っていません");
             }
 
             T[] result = new T[this.Dimension];
@@ -29,7 +29,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 }
             }
 
-            return new Vector<T>(result);
+            return new ColumnVector<T>(result);
         }
 
 
@@ -39,7 +39,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="matrixLeftSide"></param>
         /// <param name="vectorRightSide"></param>
         /// <returns></returns>
-        public static Vector<T> Multiply(Matrix<T> matrixLeftSide, Vector<T> vectorRightSide)
+        public static ColumnVector<T> Multiply(Matrix<T> matrixLeftSide, ColumnVector<T> vectorRightSide)
         {
             return matrixLeftSide.MultiplyMatrixVector(vectorRightSide);
         }

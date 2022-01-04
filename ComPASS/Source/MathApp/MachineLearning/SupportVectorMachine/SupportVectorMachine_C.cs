@@ -19,7 +19,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="CoefficientsA"></param>
         /// <param name="rowVector"></param>
         /// <returns></returns>
-        public static T Classify(Vector<T> labelsY, Matrix<T> designMatrixWithoutConstant, IKernel<T> iKernel, Vector<T> CoefficientsA, Vector<T> rowVector)
+        public static T Classify(ColumnVector<T> labelsY, Matrix<T> designMatrixWithoutConstant, IKernel<T> iKernel, ColumnVector<T> CoefficientsA, RowVector<T> rowVector)
         {
 
             //カーネルのセット
@@ -28,12 +28,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
             //カーネル用の行列
             //予測計算では1列しか使用しないため、ベクトルで代用できる(要素番号は[j,0]を指定している)
-            Vector<T> kernelMatrix = new Vector<T>(designMatrixWithoutConstant.RowCount);
+            RowVector<T> kernelMatrix = new RowVector<T>(designMatrixWithoutConstant.RowCount);
 
             //カーネルを計算する
             for (int j = 0; j < designMatrixWithoutConstant.RowCount; j++)
             {
-                Vector<T> r_j = designMatrixWithoutConstant.PickUpRowVector(j);
+                RowVector<T> r_j = designMatrixWithoutConstant.PickUpRowVector(j);
                 kernelMatrix[j] = iKernel.Calculate(rowVector, r_j);
             }
 

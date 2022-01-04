@@ -35,7 +35,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
 
             double[] copediArray_b = new double[3] { 0.3, 1.3, 2.3 };
-            var vector_b = new Vector<double>(copediArray_b);
+            var vector_b = new ColumnVector<double>(copediArray_b);
             Console.WriteLine("\nベクトル b");
             for (int i = 0; i < vector_b.Dimension; i++) { Console.WriteLine(vector_b[i]); }
 
@@ -53,14 +53,14 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
             Console.WriteLine("\nベクトル e = Ab");
             Console.WriteLine("staticメソッド");
-            var vector_e = Vector<double>.Multiply(matrix_A, vector_b);
+            var vector_e = ColumnVector<double>.Multiply(matrix_A, vector_b);
             for (int i = 0; i < vector_e.Dimension; i++) { Console.WriteLine(vector_e[i]); }
 
 
 
 
             double[] copediArray_f = new double[2] { 0.3, 1.3 };
-            var vector_f = new Vector<double>(copediArray_f);
+            var vector_f = new RowVector<double>(copediArray_f);
             Console.WriteLine("\nベクトル f");
             for (int i = 0; i < vector_f.Dimension; i++) { Console.WriteLine(vector_f[i]); }
 

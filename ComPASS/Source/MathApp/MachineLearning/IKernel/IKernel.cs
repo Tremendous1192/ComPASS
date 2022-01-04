@@ -15,7 +15,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         void SetVarianceCovarianceMatrix(Matrix<T> varianceCovarianceMatrix);
 
 
-        T Calculate(Vector<T> vector01, Vector<T> vector02);
+        T Calculate(RowVector<T> vector01, RowVector<T> vector02);
 
     }
 

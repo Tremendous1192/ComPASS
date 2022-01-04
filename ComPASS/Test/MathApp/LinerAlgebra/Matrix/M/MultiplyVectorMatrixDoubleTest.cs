@@ -16,7 +16,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
         {
 
             double[] copediArray_a = new double[2] { 0.3, 1.3 };
-            var vector_a = new Vector<double>(copediArray_a);
+            var vector_a = new RowVector<double>(copediArray_a);
             Console.WriteLine("\nベクトル a");
             for (int i = 0; i < vector_a.Dimension; i++) { Console.WriteLine(vector_a[i]); }
 

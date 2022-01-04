@@ -35,7 +35,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
 
             double r = 0.0;
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10000; i++)
             {
                 r =Math.Round( ud.NextDouble(0, 100));
                 if (r < 0 || 100 < r) { }

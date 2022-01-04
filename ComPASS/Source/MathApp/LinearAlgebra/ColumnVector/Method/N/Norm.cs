@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 {
-    public partial class Vector<T>
+    public partial class ColumnVector<T>
         where T : struct
     {
 
@@ -27,7 +27,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static T Norm_L2(Vector<T> input)
+        public static T Norm_L2(ColumnVector<T> input)
         {
             return input.Norm_L2();
         }

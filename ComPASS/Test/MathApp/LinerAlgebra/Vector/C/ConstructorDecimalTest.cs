@@ -19,7 +19,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
             //コンストラクターのテスト 1
             int dimension = 5;
             Console.WriteLine(dimension + "次元の零ベクトルを生成します");
-            Vector<decimal> vector_1 = new Vector<decimal>(dimension);
+            ColumnVector<decimal> vector_1 = new ColumnVector<decimal>(dimension);
 
             for (int i = 0; i < vector_1.Dimension; i++)
             {
@@ -38,7 +38,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 Console.WriteLine(copiedArray_1[i]);
             }
 
-            var vector_2 = new Vector<decimal>(copiedArray_1);
+            var vector_2 = new ColumnVector<decimal>(copiedArray_1);
             Console.WriteLine("\n生成したベクトルの各要素を確認します。");
             for (int i = 0; i < vector_2.Dimension; i++)
             {
@@ -57,7 +57,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 Console.WriteLine(copiedList_2[i]);
             }
 
-            var vector_3 = new Vector<decimal>(copiedList_2);
+            var vector_3 = new ColumnVector<decimal>(copiedList_2);
             Console.WriteLine("\n生成したベクトルの各要素を確認します。");
             for (int i = 0; i < vector_3.Dimension; i++)
             {

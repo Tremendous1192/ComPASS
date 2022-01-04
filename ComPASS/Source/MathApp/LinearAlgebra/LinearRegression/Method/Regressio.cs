@@ -14,7 +14,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="dsignMatrixWithoutConctant"></param>
         /// <param name="coefficientW"></param>
         /// <returns></returns>
-        public static Vector<T> Regression(Matrix<T> dsignMatrixWithoutConctant, Vector<T> coefficientW)
+        public static ColumnVector<T> Regression(Matrix<T> dsignMatrixWithoutConctant, ColumnVector<T> coefficientW)
         {
             var X = LinearRegression<T>.MakeDesignMatrixWithConstant(dsignMatrixWithoutConctant);
 
@@ -27,14 +27,14 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="vectorWithoutConctant"></param>
         /// <param name="coefficientW"></param>
         /// <returns></returns>
-        public static Vector<T> Regression(Vector<T> vectorWithoutConctant, Vector<T> coefficientW)
+        public static T Regression(RowVector<T> vectorWithoutConctant, ColumnVector<T> coefficientW)
         {
             var X = LinearRegression<T>.MakeVectorForLinerRegression(vectorWithoutConctant);
 
             T[] result = new T[1] { (dynamic)X * coefficientW };
 
 
-            return new Vector<T>(result);
+            return (dynamic)X * coefficientW;
         }
 
 

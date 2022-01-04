@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 {
-    public partial class Vector<T>
+    public partial class RowVector<T>
         where T : struct
     {
 
@@ -16,7 +16,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="matrixRightSide"></param>
         /// <returns></returns>
-        public Vector<T> MultiplyVectorMatrix( Matrix<T> matrixRightSide)
+        public RowVector<T> MultiplyRowVectorMatrix( Matrix<T> matrixRightSide)
         {
             if (this.Dimension != matrixRightSide.RowCount)
             {
@@ -33,19 +33,19 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 }
             }
 
-            return new Vector<T>(result);
+            return new RowVector<T>(result);
         }
 
 
         /// <summary>
         /// ベクトルと行列の積
         /// </summary>
-        /// <param name="vectorLeftSide"></param>
+        /// <param name="rowVectorLeftSide"></param>
         /// <param name="matrixRightSide"></param>
         /// <returns></returns>
-        public static Vector<T> Multiply(Vector<T> vectorLeftSide, Matrix<T> matrixRightSide)
+        public static RowVector<T> Multiply(RowVector<T> rowVectorLeftSide, Matrix<T> matrixRightSide)
         {
-            return matrixRightSide.MultiplyVectorMatrix(vectorLeftSide);
+            return matrixRightSide.MultiplyVectorMatrix(rowVectorLeftSide);
         }
 
 

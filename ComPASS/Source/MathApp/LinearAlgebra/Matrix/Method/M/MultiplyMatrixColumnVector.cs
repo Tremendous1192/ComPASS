@@ -10,11 +10,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 行列とベクトルの積
         /// </summary>
-        /// <param name="vectorRightSide"></param>
+        /// <param name="columnVectorRightSide"></param>
         /// <returns></returns>
-        public Vector<T> MultiplyMatrixVector(Vector<T> vectorRightSide)
+        public ColumnVector<T> MultiplyMatrixVector(ColumnVector<T> columnVectorRightSide)
         {
-            if (this.ColumnCount != vectorRightSide.Dimension)
+            if (this.ColumnCount != columnVectorRightSide.Dimension)
             {
                 throw new FormatException("行列の列数と、ベクトルの次元が揃っていません");
             }
@@ -25,11 +25,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 for (int j = 0; j < this.ColumnCount; j++)
                 {
 
-                    result[i] += (dynamic)matrix[i][j] * vectorRightSide[j];
+                    result[i] += (dynamic)matrix[i][j] * columnVectorRightSide[j];
                 }
             }
 
-            return new Vector<T>(result);
+            return new ColumnVector<T>(result);
         }
 
 
@@ -37,11 +37,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// 行列とベクトルの乗算を行う。演算子 "*" のオーバーロード
         /// </summary>
         /// <param name="matrixLeftSide"></param>
-        /// <param name="vectorRightSide"></param>
+        /// <param name="columnVectorRightSide"></param>
         /// <returns></returns>
-        public static Vector<T> operator *(Matrix<T> matrixLeftSide, Vector<T> vectorRightSide)
+        public static ColumnVector<T> operator *(Matrix<T> matrixLeftSide, ColumnVector<T> columnVectorRightSide)
         {
-            return matrixLeftSide.MultiplyMatrixVector(vectorRightSide);
+            return matrixLeftSide.MultiplyMatrixVector(columnVectorRightSide);
         }
 
 
@@ -49,11 +49,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// 行列とベクトルの積
         /// </summary>
         /// <param name="matrixLeftSide"></param>
-        /// <param name="vectorRightSide"></param>
+        /// <param name="columnVectorRightSide"></param>
         /// <returns></returns>
-        public static Vector<T> Multiply(Matrix<T> matrixLeftSide, Vector<T> vectorRightSide)
+        public static ColumnVector<T> Multiply(Matrix<T> matrixLeftSide, ColumnVector<T> columnVectorRightSide)
         {
-            return matrixLeftSide.MultiplyMatrixVector(vectorRightSide);
+            return matrixLeftSide.MultiplyMatrixVector(columnVectorRightSide);
         }
 
 

@@ -11,7 +11,8 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 線形回帰のテスト
         /// </summary>
-        public void Test() {
+        public void Test()
+        {
 
             Console.WriteLine("線形回帰のテスト関数");
 
@@ -52,19 +53,20 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
             height[10] = 170.1;
             height[11] = 170.8;
 
-            Vector<double> outputYSet = new Vector<double>(height);
+            ColumnVector<double> outputYSet = new ColumnVector<double>(height);
 
 
-            Vector<double> CoefficientW = LinearRegression<double>.Learn(designMatrixWithoutConctant, outputYSet);
+            ColumnVector<double> CoefficientW = LinearRegression<double>.Learn(designMatrixWithoutConctant, outputYSet);
             Console.WriteLine("\n" + "y = " + CoefficientW[0].ToString("G3") + " + " + CoefficientW[1].ToString("G3") + "x");
             Console.WriteLine("\n説明変数x" + "\t" + "目的変数y" + "\t" + "予測値Y");
             Console.WriteLine("体重 x    " + "\t" + "身長 y   " + "\t" + "予測値Y");
-            for (int i = 0; i < outputYSet.Dimension; i++){
-                Vector<double> xWithoutConctant = designMatrixWithoutConctant.PickUpRowVector(i);
+            for (int i = 0; i < outputYSet.Dimension; i++)
+            {
+                RowVector<double> xWithoutConctant = designMatrixWithoutConctant.PickUpRowVector(i);
 
-                Vector<double> result = LinearRegression<double>.Regression(xWithoutConctant, CoefficientW);
+                double result = LinearRegression<double>.Regression(xWithoutConctant, CoefficientW);
 
-                Console.WriteLine(designMatrixWithoutConctant[i, 0] + "\t\t" + outputYSet[i] + "\t\t" + result[0].ToString("G4"));
+                Console.WriteLine(designMatrixWithoutConctant[i, 0] + "\t\t" + outputYSet[i] + "\t\t" + result.ToString("G4"));
             }
 
 
@@ -89,19 +91,19 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 14,
                 17,
             };
-            outputYSet = new Vector<double>(Earnings);
+            outputYSet = new ColumnVector<double>(Earnings);
 
             CoefficientW = LinearRegression<double>.Learn(designMatrixWithoutConctant, outputYSet);
             Console.WriteLine("\n" + "y = " + CoefficientW[0].ToString("G3") + " + " + CoefficientW[1].ToString("G3") + "x1" + " + " + CoefficientW[2].ToString("G3") + "x2");
-            Console.WriteLine("\n説明変数x1" + "\t"  + "説明変数x2" + "\t" + "目的変数y" + "\t" + "予測値Y");
+            Console.WriteLine("\n説明変数x1" + "\t" + "説明変数x2" + "\t" + "目的変数y" + "\t" + "予測値Y");
             Console.WriteLine("広告費(百万円)" + "\t" + "販売人員数" + "\t" + "売上(百万円)" + "\t" + "予測値Y");
             for (int i = 0; i < outputYSet.Dimension; i++)
             {
-                Vector<double> xWithoutConctant = Matrix<double>.PickUpRowVector(designMatrixWithoutConctant, i);
+                RowVector<double> xWithoutConctant = Matrix<double>.PickUpRowVector(designMatrixWithoutConctant, i);
 
-                Vector<double> result = LinearRegression<double>.Regression(xWithoutConctant, CoefficientW);
+                double result = LinearRegression<double>.Regression(xWithoutConctant, CoefficientW);
 
-                Console.WriteLine(designMatrixWithoutConctant[i, 0] + "\t\t" + designMatrixWithoutConctant[i, 1] + "\t\t" + outputYSet[i] + "\t\t" + result[0].ToString("G3"));
+                Console.WriteLine(designMatrixWithoutConctant[i, 0] + "\t\t" + designMatrixWithoutConctant[i, 1] + "\t\t" + outputYSet[i] + "\t\t" + result.ToString("G3"));
             }
 
         }

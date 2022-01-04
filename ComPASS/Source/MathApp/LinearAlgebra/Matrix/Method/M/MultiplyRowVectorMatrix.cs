@@ -14,7 +14,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="vectorLeftSide"></param>
         /// <returns></returns>
-        public Vector<T> MultiplyVectorMatrix(Vector<T> vectorLeftSide)
+        public RowVector<T> MultiplyVectorMatrix(RowVector<T> vectorLeftSide)
         {
             if (this.RowCount != vectorLeftSide.Dimension)
             {
@@ -31,19 +31,19 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 }
             }
 
-            return new Vector<T>(result);
+            return new RowVector<T>(result);
         }
 
 
         /// <summary>
         /// ベクトルと行列の乗算を行う。演算子 "*" のオーバーロード
         /// </summary>
-        /// <param name="vectorLeftSide"></param>
+        /// <param name="rowVectorLeftSide"></param>
         /// <param name="matrixRightSide"></param>
         /// <returns></returns>
-        public static Vector<T> operator *(Vector<T> vectorLeftSide, Matrix<T> matrixRightSide)
+        public static RowVector<T> operator *(RowVector<T> rowVectorLeftSide, Matrix<T> matrixRightSide)
         {
-            return matrixRightSide.MultiplyVectorMatrix(vectorLeftSide);
+            return matrixRightSide.MultiplyVectorMatrix(rowVectorLeftSide);
         }
 
 
@@ -53,7 +53,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="vectorLeftSide"></param>
         /// <param name="matrixRightSide"></param>
         /// <returns></returns>
-        public static Vector<T> Multiply(Vector<T> vectorLeftSide, Matrix<T> matrixRightSide)
+        public static RowVector<T> Multiply(RowVector<T> vectorLeftSide, Matrix<T> matrixRightSide)
         {
             return matrixRightSide.MultiplyVectorMatrix(vectorLeftSide);
         }

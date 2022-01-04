@@ -35,7 +35,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
 
             double[] copediArray_b = new double[3] { 0.3, 1.3, 2.3 };
-            var vector_b = new Vector<double>(copediArray_b);
+            var vector_b = new ColumnVector<double>(copediArray_b);
             Console.WriteLine("\nベクトル b");
             for (int i = 0; i < vector_b.Dimension; i++) { Console.WriteLine(vector_b[i]); }
 

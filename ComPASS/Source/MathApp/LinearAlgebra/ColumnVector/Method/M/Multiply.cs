@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 {
-    public partial class Vector<T>
+    public partial class ColumnVector<T>
         where T : struct
     {
 

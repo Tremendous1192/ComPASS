@@ -5,12 +5,11 @@ using System.Text;
 namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 {
     /// <summary>
-    /// ベクトル計算用のクラス。各要素は配列[ ]で表す。
-    /// 基本的に、行ベクトルと列ベクトルを区別しない。
-    /// the class calculating Vector. Vector is defined as double[].
+    /// 行ベクトル計算用のクラス。各要素は配列[ ]で表す。
+    /// the row vector class. Vector is defined like double[].
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public partial class Vector<T>
+    public partial class RowVector<T>
         where T : struct
     {
 

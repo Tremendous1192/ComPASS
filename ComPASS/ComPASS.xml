@@ -435,6 +435,202 @@
             メルセンヌツイスターの周期2^19937-1 回毎に種をリセットする
             </summary>
         </member>
+        <member name="T:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1">
+            <summary>
+            列ベクトル計算用のクラス。各要素は配列[ ]で表す。
+            the column vector class. Vector is defined like double[].
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.#ctor(System.Int32)">
+            <summary>
+            コンストラクター。ゼロベクトルを生成する。
+            </summary>
+            <param name="dimension"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.#ctor(`0[])">
+            <summary>
+            コンストラクター。1次元配列をベクトルの初期値とする。
+            </summary>
+            <param name="initialValue"></param>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.#ctor(System.Collections.Generic.List{`0})">
+            <summary>
+            コンストラクター。リストをベクトルの初期値とする。
+            </summary>
+            <param name="initialValue"></param>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.vector">
+            <summary>
+            ベクトルを格納する配列
+            </summary>
+        </member>
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.dimensionCount">
+            <summary>
+            ベクトルの次元
+            </summary>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Add(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの加算を行う。
+            </summary>
+            <param name="otherVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.op_Addition(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの加算を行う。演算子 "+" のオーバーロード
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Add(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの加算を行う。
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.MultiplyColumnVectorRowVector(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            ベクトルの積を返す.
+            </summary>
+            <param name="otherVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            ベクトルの積を返す.演算子 "*" のオーバーロード
+            </summary>
+            <param name="columnVector"></param>
+            <param name="rowVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            ベクトルの積を計算する。
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.MultiplyInnerProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの内積を返す.
+            </summary>
+            <param name="otherVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの内積を返す.演算子 "*" のオーバーロード
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの内積を計算する。
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.MultiplyInnerProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            ベクトルの内積を返す.
+            </summary>
+            <param name="otherVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの内積を返す.演算子 "*" のオーバーロード
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの内積を計算する。
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.MultiplyMatrixVector(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            行列とベクトルの積
+            </summary>
+            <param name="matrixLeftSide"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            行列とベクトルの積
+            </summary>
+            <param name="matrixLeftSide"></param>
+            <param name="vectorRightSide"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Norm_L2">
+            <summary>
+            ベクトルのL2ノルムを返す。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Norm_L2(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルのL2ノルムを返す。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Subtract(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの減算を行う。
+            </summary>
+            <param name="subtrahendVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.op_Subtraction(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの加算を行う。演算子 "+" のオーバーロード
+            </summary>
+            <param name="minuendVector"></param>
+            <param name="subtrahendVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Subtract(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            ベクトルの加算を行う。
+            </summary>
+            <param name="minuendVector"></param>
+            <param name="subtrahendVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Transpose">
+            <summary>
+            行ベクトルを返す.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Item(System.Int32)">
+            <summary>
+            ベクトルの要素。
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.Dimension">
+            <summary>
+            ベクトルの次元
+            </summary>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.Average(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             計画行列(行ベクトルの集合)の、平均ベクトルを返す。
@@ -456,7 +652,7 @@
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             回帰直線の係数を学習する
             </summary>
@@ -464,7 +660,7 @@
             <param name="outputSetY"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.RidgeLearn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},`0)">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.RidgeLearn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},`0)">
             <summary>
             Ridge回帰で回帰直線の係数を学習する.
             </summary>
@@ -473,7 +669,7 @@
             <param name="lambda"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.LASSOLearn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},`0)">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.LASSOLearn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},`0)">
             <summary>
             LASSSO回帰で回帰直線の係数を学習する
             </summary>
@@ -482,7 +678,7 @@
             <param name="lambda"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.MakeVectorForLinerRegression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.MakeVectorForLinerRegression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             線形回帰用のベクトルを生成する。
             </summary>
@@ -496,7 +692,7 @@
             <param name="matrixWithoutConstant"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             回帰直線の値を予測する
             </summary>
@@ -504,7 +700,7 @@
             <param name="coefficientW"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.LinearRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             回帰直線の値を予測する
             </summary>
@@ -619,45 +815,45 @@
             <param name="matrixRightSide"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.MultiplyMatrixVector(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.MultiplyMatrixVector(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             行列とベクトルの積
             </summary>
-            <param name="vectorRightSide"></param>
+            <param name="columnVectorRightSide"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             行列とベクトルの乗算を行う。演算子 "*" のオーバーロード
             </summary>
             <param name="matrixLeftSide"></param>
-            <param name="vectorRightSide"></param>
+            <param name="columnVectorRightSide"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             行列とベクトルの積
             </summary>
             <param name="matrixLeftSide"></param>
-            <param name="vectorRightSide"></param>
+            <param name="columnVectorRightSide"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.MultiplyVectorMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.MultiplyVectorMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             行列とベクトルの積
             </summary>
             <param name="vectorLeftSide"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             ベクトルと行列の乗算を行う。演算子 "*" のオーバーロード
             </summary>
-            <param name="vectorLeftSide"></param>
+            <param name="rowVectorLeftSide"></param>
             <param name="matrixRightSide"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             ベクトルと行列の積
             </summary>
@@ -734,50 +930,49 @@
             列数
             </summary>
         </member>
-        <member name="T:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1">
+        <member name="T:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1">
             <summary>
-            ベクトル計算用のクラス。各要素は配列[ ]で表す。
-            基本的に、行ベクトルと列ベクトルを区別しない。
-            the class calculating Vector. Vector is defined as double[].
+            行ベクトル計算用のクラス。各要素は配列[ ]で表す。
+            the row vector class. Vector is defined like double[].
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.#ctor(System.Int32)">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.#ctor(System.Int32)">
             <summary>
             コンストラクター。ゼロベクトルを生成する。
             </summary>
             <param name="dimension"></param>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.#ctor(`0[])">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.#ctor(`0[])">
             <summary>
             コンストラクター。1次元配列をベクトルの初期値とする。
             </summary>
             <param name="initialValue"></param>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.#ctor(System.Collections.Generic.List{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.#ctor(System.Collections.Generic.List{`0})">
             <summary>
             コンストラクター。リストをベクトルの初期値とする。
             </summary>
             <param name="initialValue"></param>
         </member>
-        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.vector">
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.vector">
             <summary>
             ベクトルを格納する配列
             </summary>
         </member>
-        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.dimensionCount">
+        <member name="F:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.dimensionCount">
             <summary>
             ベクトルの次元
             </summary>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Add(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Add(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             ベクトルの加算を行う。
             </summary>
             <param name="otherVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.op_Addition(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.op_Addition(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             ベクトルの加算を行う。演算子 "+" のオーバーロード
             </summary>
@@ -785,7 +980,7 @@
             <param name="vector02"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Add(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Add(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             ベクトルの加算を行う。
             </summary>
@@ -793,22 +988,45 @@
             <param name="vector02"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.MultiplyInnerProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.MultiplyColumnVectorRowVector(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
-            ベクトルの内積
+            ベクトルの積を返す.
             </summary>
             <param name="otherVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
-            ベクトルの内積を行う。演算子 "*" のオーバーロード
+            ベクトルの積を返す.演算子 "*" のオーバーロード
+            </summary>
+            <param name="columnVector"></param>
+            <param name="rowVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            ベクトルの積を計算する。
             </summary>
             <param name="vector01"></param>
             <param name="vector02"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.MultiplyInnerProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            ベクトルの内積を返す.
+            </summary>
+            <param name="otherVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.op_Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            ベクトルの内積を返す.演算子 "*" のオーバーロード
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             ベクトルの内積を計算する。
             </summary>
@@ -816,57 +1034,57 @@
             <param name="vector02"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.MultiplyMatrixVector(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.MultiplyInnerProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
-            行列とベクトルの積
+            ベクトルの内積を返す.
             </summary>
-            <param name="matrixLeftSide"></param>
+            <param name="otherVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
-            行列とベクトルの積
+            ベクトルの内積を計算する。
             </summary>
-            <param name="matrixLeftSide"></param>
-            <param name="vectorRightSide"></param>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.MultiplyVectorMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.MultiplyRowVectorMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             ベクトルと行列の積
             </summary>
             <param name="matrixRightSide"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Multiply(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             ベクトルと行列の積
             </summary>
-            <param name="vectorLeftSide"></param>
+            <param name="rowVectorLeftSide"></param>
             <param name="matrixRightSide"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Norm_L2">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Norm_L2">
             <summary>
             ベクトルのL2ノルムを返す。
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Norm_L2(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Norm_L2(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             ベクトルのL2ノルムを返す。
             </summary>
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Subtract(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Subtract(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             ベクトルの減算を行う。
             </summary>
             <param name="subtrahendVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.op_Subtraction(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.op_Subtraction(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             ベクトルの加算を行う。演算子 "+" のオーバーロード
             </summary>
@@ -874,7 +1092,7 @@
             <param name="subtrahendVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Subtract(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Subtract(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             ベクトルの加算を行う。
             </summary>
@@ -882,14 +1100,20 @@
             <param name="subtrahendVector"></param>
             <returns></returns>
         </member>
-        <member name="P:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Item(System.Int32)">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Transpose">
+            <summary>
+            列ベクトルを返す.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Item(System.Int32)">
             <summary>
             ベクトルの要素。
             </summary>
             <param name="i"></param>
             <returns></returns>
         </member>
-        <member name="P:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector`1.Dimension">
+        <member name="P:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.Dimension">
             <summary>
             ベクトルの次元
             </summary>
@@ -906,7 +1130,7 @@
             </summary>
             <param name="varianceCovarianceMatrix"></param>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.GaussianKernel`1.Calculate(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.GaussianKernel`1.Calculate(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             カーネル関数を計算する。
             </summary>
@@ -928,7 +1152,7 @@
             </summary>
             <param name="varianceCovarianceMatrix"></param>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SimplePolynomialKernel`1.Calculate(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SimplePolynomialKernel`1.Calculate(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             カーネル関数を計算する。
             </summary>
@@ -941,7 +1165,7 @@
             サポートベクトルマシンの計算を行うクラス
             </summary>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1.Classify(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1.Classify(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             行ベクトルの識別を行う .
             Perform row vector identification .
@@ -953,7 +1177,7 @@
             <param name="rowVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Vector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},System.Int32)">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},System.Int32)">
             <summary>
             係数Aを学習する .
             Learn coefficient A .
@@ -967,6 +1191,11 @@
         <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.IOApp.IOTextTest.TestReadTextSplitedByCommaJagArray(System.Double)">
             <summary>
             1次元配列 double[3] をカンマ区切りstringに変換して保存して、その後読み込む.
+            </summary>
+        </member>
+        <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp.IRandomNumber.Test_Uniform_Normal_HalfNormal_LogNormal_Cauchy">
+            <summary>
+            一様分布、正規分布、半正規分布、対数正規分布、コーシー分布のテストを行う。
             </summary>
         </member>
         <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrixTest.VarianceCovarianceMatrixTest">

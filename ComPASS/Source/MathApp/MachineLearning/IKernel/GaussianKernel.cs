@@ -46,9 +46,9 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="vector01"></param>
         /// <param name="vector02"></param>
         /// <returns></returns>
-        public T Calculate(Vector<T> vector01, Vector<T> vector02)
+        public T Calculate(RowVector<T> vector01, RowVector<T> vector02)
         {
-            Vector<T> deltaRowVector = vector01 - vector02;
+            RowVector<T> deltaRowVector = vector01 - vector02;
             if (set)
             {
                 var product = deltaRowVector * inverseVarianceCovarianceMatrix * deltaRowVector;

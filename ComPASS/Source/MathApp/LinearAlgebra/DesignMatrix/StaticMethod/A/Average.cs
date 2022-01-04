@@ -13,8 +13,8 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="designMatrix"></param>
         /// <returns></returns>
-        public static Vector<T> Average(Matrix<T> designMatrix){
-            Vector<T> result = designMatrix.PickUpRowVector(0);
+        public static RowVector<T> Average(Matrix<T> designMatrix){
+            RowVector<T> result = designMatrix.PickUpRowVector(0);
 
             for (int i = 1; i < designMatrix.RowCount; i++){
                 result += designMatrix.PickUpRowVector(i);

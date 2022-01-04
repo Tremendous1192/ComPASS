@@ -15,7 +15,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="dsignMatrixWithoutConctant"></param>
         /// <param name="outputSetY"></param>
         /// <returns></returns>
-        public static Vector<T> Learn(Matrix<T> dsignMatrixWithoutConctant, Vector<T> outputSetY)
+        public static ColumnVector<T> Learn(Matrix<T> dsignMatrixWithoutConctant, ColumnVector<T> outputSetY)
         {
 
             var X = LinearRegression<T>.MakeDesignMatrixWithConstant(dsignMatrixWithoutConctant);
@@ -34,7 +34,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="outputSetY"></param>
         /// <param name="lambda"></param>
         /// <returns></returns>
-        public static Vector<T> RidgeLearn(Matrix<T> dsignMatrixWithoutConctant, Vector<T> outputSetY,T lambda)
+        public static ColumnVector<T> RidgeLearn(Matrix<T> dsignMatrixWithoutConctant, ColumnVector<T> outputSetY,T lambda)
         {
             if ((dynamic)lambda < 0)
             {
@@ -63,7 +63,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <param name="outputSetY"></param>
         /// <param name="lambda"></param>
         /// <returns></returns>
-        public static Vector<T> LASSOLearn(Matrix<T> dsignMatrixWithoutConctant, Vector<T> outputSetY, T lambda)
+        public static ColumnVector<T> LASSOLearn(Matrix<T> dsignMatrixWithoutConctant, ColumnVector<T> outputSetY, T lambda)
         {
             if ((dynamic)lambda < 0)
             {
@@ -77,7 +77,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
             var lambdaPer2N = (dynamic)lambda / 2 / X.RowCount;
 
-            var wLASSO = new Vector<T>(w.Dimension);
+            var wLASSO = new ColumnVector<T>(w.Dimension);
             for (int i = 0; i < wLASSO.Dimension; i++)
             {
                 var sign = w[i];
