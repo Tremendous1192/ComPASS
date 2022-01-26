@@ -493,6 +493,21 @@
             <param name="vector02"></param>
             <returns></returns>
         </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.HadamardProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            アダマール積を計算する.
+            </summary>
+            <param name="otherVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.HadamardProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            アダマール積を計算する.
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector`1.MultiplyColumnVectorRowVector(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
             <summary>
             ベクトルの積を返す.
@@ -778,6 +793,21 @@
             <param name="matrix"></param>
             <returns></returns>
         </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.HadamardProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            アダマール積を計算する.
+            </summary>
+            <param name="otherMatrix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.HadamardProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            アダマール積を計算する.
+            </summary>
+            <param name="matrix01"></param>
+            <param name="matrix02"></param>
+            <returns></returns>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix`1.Inverse">
             <summary>
             逆行列.
@@ -988,6 +1018,21 @@
             <param name="vector02"></param>
             <returns></returns>
         </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.HadamardProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            アダマール積を計算する.
+            </summary>
+            <param name="otherVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.HadamardProduct(Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            アダマール積を計算する.
+            </summary>
+            <param name="vector01"></param>
+            <param name="vector02"></param>
+            <returns></returns>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector`1.MultiplyColumnVectorRowVector(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             ベクトルの積を返す.
@@ -1162,7 +1207,8 @@
         </member>
         <member name="T:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1">
             <summary>
-            サポートベクトルマシンの計算を行うクラス
+            サポートベクトルマシンの計算を行うクラス.
+            中川裕志 著「機械学習」のアルゴリズムに基づいて計算する.
             </summary>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1.Classify(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
@@ -1173,11 +1219,11 @@
             <param name="labelsY"></param>
             <param name="designMatrixWithoutConstant"></param>
             <param name="iKernel"></param>
-            <param name="CoefficientsA"></param>
+            <param name="coefficientsA"></param>
             <param name="rowVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},System.Int32)">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorMachine`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0})">
             <summary>
             係数Aを学習する .
             Learn coefficient A .
@@ -1185,7 +1231,34 @@
             <param name="labelsY"></param>
             <param name="designMatrixWithoutConstant"></param>
             <param name="iKernel"></param>
-            <param name="hyperParameterExponent"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorRegression`1">
+            <summary>
+            サポートベクトル回帰を計算するクラス.
+            C.M.ビショップ著「パターン認識と機械学習」下巻の解に基づいて計算する.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorRegression`1.Learn(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},`0)">
+            <summary>
+            係数ベクトルを学習する。
+            ハイパーパラメータ λ は正の数。
+            </summary>
+            <param name="labelsY"></param>
+            <param name="designMatrixWithoutConstant"></param>
+            <param name="iKernel"></param>
+            <param name="hyperParameterLambda"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.SupportVectorRegression`1.Regression(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.IKernel{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.RowVector{`0})">
+            <summary>
+            回帰分析で、結果を予測する
+            </summary>
+            <param name="designMatrixWithoutConstant"></param>
+            <param name="iKernel"></param>
+            <param name="coefficientsA"></param>
+            <param name="rowVector"></param>
             <returns></returns>
         </member>
         <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.IOApp.IOTextTest.TestReadTextSplitedByCommaJagArray(System.Double)">

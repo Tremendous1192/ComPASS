@@ -45,15 +45,16 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
             GaussianKernel<double> iKernel = new GaussianKernel<double>();
 
-            var coefficientsA = SupportVectorMachine<double>.Learn(labelsY, designMatrix, iKernel, -2);
+            var coefficientsA = SupportVectorMachine<double>.Learn(labelsY, designMatrix, iKernel);
 
 
+            Console.WriteLine("計画行列x1" + "\t" + "計画行列x2" + "\t" + "ラベル" + "\t\t" + "予測値");
             double[] results = new double[designMatrix.RowCount];
             for (int i = 0; i < results.Length; i++)
             {
                 results[i] = SupportVectorMachine<double>.Classify(labelsY, designMatrix, iKernel, coefficientsA, designMatrix.PickUpRowVector(i));
 
-                Console.WriteLine(designMatrix[i, 0] + " " + designMatrix[i, 1] + " " + labelsY[i] + " " + results[i]);
+                Console.WriteLine(designMatrix[i, 0] + "\t\t" + designMatrix[i, 1] + "\t\t" + labelsY[i] + "\t\t" + results[i].ToString("G5"));
             }
 
 
@@ -61,6 +62,8 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
 
         }
+
+
 
     }
 }
