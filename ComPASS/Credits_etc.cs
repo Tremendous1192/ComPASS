@@ -2,12 +2,21 @@
 
 namespace ComPASS
 {
-    public class Class1
+    public class Credits_etc
     {
+        //Credits
+
+        // ChartDirector
+        // This software is based in part on the work of the Independent JPEG Group
+        // This software is based in part of the work of the FreeType Team
+        // https://www.advsofteng.com/doc/cdpydoc/license.htm
+
+
 
         //メモ
 
 
+        //ためになった引用
 
         //1
         //Q クラスライブラリで作ったDLLを別プロジェクトで参照に入れてIntelliSenseで見ても説明文が出てきません
