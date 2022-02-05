@@ -1261,6 +1261,12 @@
             <param name="rowVector"></param>
             <returns></returns>
         </member>
+        <member name="T:Test.Tremendous1192.SelfEmployed.CoMPASS.Books.BasicOfStatisticalDataAnalysis">
+            <summary>
+            「統計的データ解析の基本(著:山田 秀, 松浦 峻) 発行：サイエンス社」の演習問題や例題を解いていくクラス。
+            過去に作成したDLL_Toolbox_I_Needからの移植と考えていたが、行列周りの設計を一新したので、ほぼ新規作成です。
+            </summary>
+        </member>
         <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.IOApp.IOTextTest.TestReadTextSplitedByCommaJagArray(System.Double)">
             <summary>
             1次元配列 double[3] をカンマ区切りstringに変換して保存して、その後読み込む.
