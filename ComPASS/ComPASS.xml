@@ -646,6 +646,13 @@
             ベクトルの次元
             </summary>
         </member>
+        <member name="T:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1">
+            <summary>
+            計画行列を計算するクラス。
+            全てstaticメソッドにして、引数をMatrixにしている。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.Average(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             計画行列(行ベクトルの集合)の、平均ベクトルを返す。
@@ -653,9 +660,31 @@
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.CorelationMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            相関係数行列を返す。
+            </summary>
+            <param name="designMatrix"></param>
+            <returns></returns>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.InverseVarianceCovarianceMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             分散・共分散行列の逆行列を返す。
+            </summary>
+            <param name="designMatrix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.PickUpRowVector(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0},System.Int32)">
+            <summary>
+            行ベクトルを返す
+            </summary>
+            <param name="matrix"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.DesignMatrix`1.StandardDeviation(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+            <summary>
+            各要素の標準偏差を返す。
             </summary>
             <param name="designMatrix"></param>
             <returns></returns>
