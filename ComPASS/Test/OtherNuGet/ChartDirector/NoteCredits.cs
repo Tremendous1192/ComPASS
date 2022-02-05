@@ -10,6 +10,9 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet
 {
     public partial class ChartDirectorTest
     {
+        /// <summary>
+        /// ChartDirectorのクレジットをコンソールに記述する関数
+        /// </summary>
         public static void NoteCredits()
         {
             Console.WriteLine("\n" + "ChartDirector試用版に関する利用規約の引用");

@@ -10,6 +10,9 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet
 {
    public partial class ChartDirectorTest
     {
+        /// <summary>
+        /// 簡単な棒グラフのpng画像を作成するテスト関数
+        /// </summary>
         public void SimpleBarChartTest()
         {
             Console.WriteLine("グラフ描画用のクラスを定義します。画像サイズは、(640px, 480px)です");

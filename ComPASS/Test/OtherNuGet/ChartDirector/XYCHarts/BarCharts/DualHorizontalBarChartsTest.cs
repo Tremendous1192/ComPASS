@@ -10,7 +10,9 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet
 {
     public partial class ChartDirectorTest
     {
-
+        /// <summary>
+        /// 2つの横向き棒グラフを並べて人口ピラミッドのグラフを作成して、png画像として保存するテスト関数
+        /// </summary>
         public void DualHorizontalBarChartsTest()
         {
             Console.WriteLine("統計ダッシュボード - 人口ピラミッド  の2020年の人口ピラミッドグラフを作成します。");
