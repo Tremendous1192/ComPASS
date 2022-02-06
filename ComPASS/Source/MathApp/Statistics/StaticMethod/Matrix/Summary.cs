@@ -19,7 +19,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// [4,*] 最大値
         /// [5,*] 平均値
         /// [6,*] 偏差平方和
-        /// [7,*] 標本分散
+        /// [7,*] 不偏標本分散
         /// [8,*] 標本標準偏差
         /// [9,*] 標本標準誤差
         /// </summary>
@@ -33,10 +33,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
 
             //解析結果
-            T[,] summary = new T[9, sorted.GetLength(1)];
+            T[,] summary = new T[10, sorted.GetLength(1)];
 
 
-            //[0,*] 最小値 and [4,*] 最大値
+            //[0,*] 最小値
+            //[4,*] 最大値
             for (int k = 0; k < summary.GetLength(1); k++)
             {
                 summary[0, k] = sorted[0, k];
@@ -100,7 +101,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             }
 
 
-            //[7,*] 標本分散
+            //[7,*] 不偏標本分散
             //[8,*] 標本標準偏差
             //[9,*] 標本標準誤差
             int nMinus1 = designMatrix.RowCount - 1;
