@@ -13,7 +13,8 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="designMatrix"></param>
         /// <returns></returns>
-        public static Matrix<T> VarianceCovarianceMatrix(Matrix<T> designMatrix) {
+        public static Matrix<T> VarianceCovarianceMatrix(Matrix<T> designMatrix)
+        {
 
             //Cov(x,y) = E[xy] - E[x]E[y] を計算する。
 
@@ -22,24 +23,35 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
             Matrix<T> varianceCovarianceMatrix = new Matrix<T>(designMatrix.ColumnCount, designMatrix.ColumnCount);
 
-            //分散・共分散行列の要素[j,k]を計算する。
+            //j次元目とk次元目の成分の積の平均値を計算する。 E[XY]
+            for (int i = 0; i < designMatrix.RowCount; i++)
+            {
+                for (int j = 0; j < designMatrix.ColumnCount; j++)
+                {
+                    for (int j2 = j; j2 < designMatrix.ColumnCount; j2++)
+                    {
+                        varianceCovarianceMatrix[j, j2] += (dynamic)designMatrix[i, j] * designMatrix[i, j2];
+                    }
+                }
+            }
+            int n = designMatrix.RowCount;
             for (int j = 0; j < designMatrix.ColumnCount; j++)
             {
-                for (int k = j; k < designMatrix.ColumnCount; k++)
+                for (int j2 = j; j2 < designMatrix.ColumnCount; j2++)
                 {
+                    varianceCovarianceMatrix[j, j2] /= (dynamic)n;
+                }
+            }
 
-                    //j次元目とk次元目の積の平均値を計算する。 E[XY]
-                    for (int n = 0; n < designMatrix.RowCount; n++)
-                    {
-                        varianceCovarianceMatrix[j, k] += (dynamic)designMatrix[n, j] * designMatrix[n, k];
-                    }
-                    varianceCovarianceMatrix[j, k] /= (dynamic)designMatrix.RowCount;
+            //j次元目の平均値とk次元目の平均値の積を引く。-E[X]E[Y]
+            for (int j = 0; j < designMatrix.ColumnCount; j++)
+            {
+                for (int j2 = j; j2 < designMatrix.ColumnCount; j2++)
+                {
+                    varianceCovarianceMatrix[j, j2] -= (dynamic)average[j] * average[j2];
 
-                    //j次元目の平均値とk次元目の平均値の積を引く。-E[X]E[Y]
-                    varianceCovarianceMatrix[j, k] -= (dynamic)average[j] * average[k];
-
-                    //j , kを入れ替えても値は同じ
-                    varianceCovarianceMatrix[k, j] = (dynamic)varianceCovarianceMatrix[j, k];
+                    //j次元目の要素とj2次元目の要素を入れ替えても同じ
+                    varianceCovarianceMatrix[j2, j] = varianceCovarianceMatrix[j, j2];
                 }
             }
 

@@ -17,7 +17,6 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         {
             //各要素の和
             RowVector<T> simpleSum = Statistics<T>.SimpleSum(designMatrix);
-            int n = designMatrix.RowCount;
 
             Matrix<T> sampleVarianceCovarianceMatrix = new Matrix<T>(designMatrix.ColumnCount, designMatrix.ColumnCount);
             //各要素の積和を計算する Σ(XY)
@@ -32,6 +31,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 }
             }
             //各要素の和の積を引く Σ(XY) - (ΣX)(ΣY)/n
+            int n = designMatrix.RowCount;
             for (int j = 0; j < designMatrix.ColumnCount; j++)
             {
                 for (int j2 = 0; j2 < designMatrix.ColumnCount; j2++)
