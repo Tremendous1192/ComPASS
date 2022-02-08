@@ -16,7 +16,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         public static RowVector<T> SampleStandardError(Matrix<T> designMatrix)
         {
             T dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)designMatrix.RowCount);
-            RowVector<T> standardError = DesignMatrix<T>.StandardDeviation(designMatrix);
+            RowVector<T> standardError = Statistics<T>.SampleStandardDeviation(designMatrix);
 
             for (int j = 0; j < designMatrix.ColumnCount; j++)
             {
