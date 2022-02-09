@@ -16,12 +16,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <returns></returns>
         public static T SampleMean(ColumnVector<T> columnVector)
         {
-            T sampleMean = Statistics<T>.SimpleSum(columnVector);
-            int n = columnVector.Dimension;
-
-            sampleMean /= (dynamic)n;
-
-            return sampleMean;
+            return (dynamic)Statistics<T>.SimpleSum(columnVector) / columnVector.Dimension;
         }
 
 

@@ -51,18 +51,18 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
             //[1] 第一四分位数
             //[3] 第三四分位数
-            int lower_quartile_point = sorted.GetLength(0) / 4;
-            int upper_quartile_point = Math.Max(sorted.GetLength(0) - sorted.GetLength(0) / 4, 0);
+            int lowerQuartilePoint = sorted.GetLength(0) / 4;
+            int upperQuartilePoint = Math.Max(sorted.GetLength(0) - sorted.GetLength(0) / 4, 0);
             if (sorted.GetLength(0) % 4 < 2)
             {
-                summary[1] = ((dynamic)sorted[lower_quartile_point] + sorted[Math.Max(lower_quartile_point - 1, 0)]) / 2;
-                summary[3] = ((dynamic)sorted[upper_quartile_point] + sorted[Math.Max(upper_quartile_point - 1, 0)]) / 2;
+                summary[1] = ((dynamic)sorted[lowerQuartilePoint] + sorted[Math.Max(lowerQuartilePoint - 1, 0)]) / 2;
+                summary[3] = ((dynamic)sorted[upperQuartilePoint] + sorted[Math.Max(upperQuartilePoint - 1, 0)]) / 2;
             }
             else
             {
-                upper_quartile_point = Math.Max(upper_quartile_point - 1, 0);
-                summary[1] = sorted[lower_quartile_point];
-                summary[3] = sorted[upper_quartile_point];
+                upperQuartilePoint = Math.Max(upperQuartilePoint - 1, 0);
+                summary[1] = sorted[lowerQuartilePoint];
+                summary[3] = sorted[upperQuartilePoint];
             }
 
             //[5] 平均値

@@ -1321,28 +1321,28 @@
             <param name="columnVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.LowerQuartileSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.LowerQuartile(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             四分位数を返す.
             </summary>
             <param name="columnVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.MaximumSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Maximum(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             最大値を返す.
             </summary>
             <param name="columnVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.MedianSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Median(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             中央値を計算する
             </summary>
             <param name="columnVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.MinimumSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Minimum(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             最小値を返す
             </summary>
@@ -1356,7 +1356,7 @@
             <param name="columnVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.UpperQuartileSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.UpperQuartile(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             第3四分位数を計算する。
             </summary>
@@ -1429,28 +1429,28 @@
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.LowerQuartileSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.LowerQuartile(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             四分位数を返す.
             </summary>
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.MaximumSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Maximum(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             最大値を返す.
             </summary>
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.MedianSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Median(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             中央値を計算する
             </summary>
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.MinimumSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Minimum(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             最小値を返す
             </summary>
@@ -1464,14 +1464,14 @@
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.UpperQuartileSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.UpperQuartile(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             第3四分位数を計算する。
             </summary>
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.CorrelationMatrixSample(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleCorrelationMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             標本相関係数行列を返す
             </summary>

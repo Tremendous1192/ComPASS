@@ -13,7 +13,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="columnVector"></param>
         /// <returns></returns>
-        public static T UpperQuartileSample(ColumnVector<T> columnVector)
+        public static T UpperQuartile(ColumnVector<T> columnVector)
         {
             //並べ替え用の配列。
             //design_matrixを計算に用いると参照渡しになるバグがある。
@@ -24,15 +24,13 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             int upperQuartilePoint = Math.Max(sorted.GetLength(0) - sorted.GetLength(0) / 4, 0);
             if (sorted.GetLength(0) % 4 < 2)
             {
-                upperQuartile = ((dynamic)sorted[upperQuartilePoint] + sorted[Math.Max(upperQuartilePoint - 1, 0)]) / 2;
+                return ((dynamic)sorted[upperQuartilePoint] + sorted[Math.Max(upperQuartilePoint - 1, 0)]) / 2;
             }
             else
             {
                 upperQuartilePoint = Math.Max(upperQuartilePoint - 1, 0);
-                upperQuartile = sorted[upperQuartilePoint];
+                return sorted[upperQuartilePoint];
             }
-
-            return upperQuartile;
         }
 
     }

@@ -16,9 +16,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         public static T SampleStandardDeviation(ColumnVector<T> columnVector)
         {
             T sampleStandardDeviation = Statistics<T>.UnbiasedSampleVariance(columnVector);
-            sampleStandardDeviation = (dynamic)Math.Sqrt((dynamic)sampleStandardDeviation);
-
-            return sampleStandardDeviation;
+            return (dynamic)Math.Sqrt((dynamic)sampleStandardDeviation);
         }
 
 

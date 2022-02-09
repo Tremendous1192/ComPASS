@@ -16,9 +16,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         public static T UnbiasedSampleVariance(ColumnVector<T> columnVector)
         {
             int nMinus1 = columnVector.Dimension - 1;
-            T unbiasedSampleVariance = (dynamic)Statistics<T>.SumOfSquaredDeviations(columnVector) / nMinus1;
-
-            return unbiasedSampleVariance;
+            return (dynamic)Statistics<T>.SumOfSquaredDeviations(columnVector) / nMinus1;
         }
 
 

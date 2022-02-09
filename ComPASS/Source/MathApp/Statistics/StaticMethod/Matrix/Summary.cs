@@ -27,7 +27,6 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <returns></returns>
         public static Matrix<T> Summary(Matrix<T> designMatrix)
         {
-
             //昇順に並べ替えた配列。
             T[,] sorted = Statistics<T>.Sort(designMatrix);
 

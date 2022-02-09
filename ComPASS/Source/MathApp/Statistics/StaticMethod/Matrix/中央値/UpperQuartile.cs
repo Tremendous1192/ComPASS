@@ -14,14 +14,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="designMatrix"></param>
         /// <returns></returns>
-        public static RowVector<T> UpperQuartileSample(Matrix<T> designMatrix)
+        public static RowVector<T> UpperQuartile(Matrix<T> designMatrix)
         {
-
             //並べ替え用の配列。
             //design_matrixを計算に用いると参照渡しになるバグがある。
             T[,] sorted = Statistics<T>.Sort(designMatrix);
-
-
 
             T[] upperQuartile = new T[sorted.GetLength(1)];
 
@@ -44,7 +41,6 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             }
 
             return new RowVector<T>(upperQuartile);
-
         }
 
 

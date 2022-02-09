@@ -49,9 +49,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 }
             }
 
-
             return sampleVarianceCovarianceMatrix;
-
         }
 
 

@@ -19,9 +19,8 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             T sumOfSquares = Statistics<T>.SumOfSquares(columnVector);
 
             int n = columnVector.Dimension;
-            T sumOfSquaredDeviations = (dynamic)sumOfSquares - (dynamic)sumOfSquares * sumOfSquares / n;
 
-            return sumOfSquaredDeviations;
+            return (dynamic)sumOfSquares - (dynamic)sumOfSquares * sumOfSquares / n;
         }
 
 

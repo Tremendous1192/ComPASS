@@ -16,7 +16,6 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <returns></returns>
         static T[,] Sort(Matrix<T> designMatrix)
         {
-
             //並べ替え用の配列。
             //design_matrixを計算に用いると参照渡しになるバグがある。
             T[,] sorted = new T[designMatrix.RowCount, designMatrix.ColumnCount];
@@ -46,7 +45,6 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
                     }
                 }
             }
-
 
             return sorted;
         }

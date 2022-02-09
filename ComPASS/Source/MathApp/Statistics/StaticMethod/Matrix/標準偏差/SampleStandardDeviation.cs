@@ -15,7 +15,6 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <returns></returns>
         public static RowVector<T> SampleStandardDeviation(Matrix<T> designMatrix)
         {
-
             RowVector<T> sampleStandardDeviation = Statistics<T>.UnbiasedSampleVariance(designMatrix);
             for (int j = 0; j < designMatrix.ColumnCount; j++)
             {

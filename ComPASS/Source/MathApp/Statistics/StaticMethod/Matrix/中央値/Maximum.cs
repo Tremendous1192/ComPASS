@@ -8,30 +8,26 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         where T : struct
     {
 
-
-   
         /// <summary>
-        /// 最小値を返す
+        /// 最大値を返す.
         /// </summary>
         /// <param name="designMatrix"></param>
         /// <returns></returns>
-        public static RowVector<T> MinimumSample(Matrix<T> designMatrix)
+        public static RowVector<T> Maximum(Matrix<T> designMatrix)
         {
-
             //昇順に並べ替えた配列。
             T[,] sorted = Statistics<T>.Sort(designMatrix);
 
-
-
-            T[] min = new T[sorted.GetLength(1)];
+            T[] max = new T[sorted.GetLength(1)];
             for (int k = 0; k < sorted.GetLength(1); k++)
             {
-                min[k] = sorted[0, k];
+                max[k] = sorted[sorted.GetLength(0) - 1, k];
             }
 
-            return new RowVector<T>(min);
-
+            return new RowVector<T>(max);
         }
+
+
 
     }
 }

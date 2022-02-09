@@ -15,12 +15,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <returns></returns>
         public static T SampleStandardError(ColumnVector<T> columnVector)
         {
-            T dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)columnVector.Dimension);
-            T standardError = Statistics<T>.SampleStandardDeviation(columnVector);
-
-            standardError /= (dynamic)dataNumberSQRT;
-
-            return standardError;
+            return (dynamic)Statistics<T>.SampleStandardDeviation(columnVector) / Math.Sqrt((dynamic)columnVector.Dimension);
         }
 
 

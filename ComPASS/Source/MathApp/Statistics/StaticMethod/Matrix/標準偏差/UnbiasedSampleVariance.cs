@@ -15,7 +15,6 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <returns></returns>
         public static RowVector<T> UnbiasedSampleVariance(Matrix<T> designMatrix)
         {
-
             RowVector<T> unbiasedSampleVariance = Statistics<T>.SumOfSquaredDeviations(designMatrix);
             int nMinus1 = designMatrix.RowCount - 1;
 

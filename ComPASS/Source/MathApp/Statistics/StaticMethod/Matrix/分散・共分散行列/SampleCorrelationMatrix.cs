@@ -13,12 +13,10 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="designMatrix"></param>
         /// <returns></returns>
-        public static Matrix<T> CorrelationMatrixSample(Matrix<T> designMatrix)
+        public static Matrix<T> SampleCorrelationMatrix(Matrix<T> designMatrix)
         {
-
             //標本分散・共分散行列
             Matrix<T> correlationMatrix = Statistics<T>.SampleVarianceCovarianceMatrix(designMatrix);
-
 
             //標準偏差計算する
             T[] std = new T[designMatrix.ColumnCount];
@@ -37,7 +35,6 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             }
 
             return correlationMatrix;
-
         }
 
 
