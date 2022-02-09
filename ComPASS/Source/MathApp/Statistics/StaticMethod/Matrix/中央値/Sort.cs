@@ -36,7 +36,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
                 {
                     for (int j = 0; j < sorted.GetLength(1); j++)
                     {
-                        // i行目のデータが、j行目のデータより大きい場合、データを入れ替える.
+                        // i行目のデータが、i2行目のデータより大きい場合、データを入れ替える.
                         if ((dynamic)sorted[i, j] > sorted[i2, j])
                         {
                             buffer = sorted[i, j];
