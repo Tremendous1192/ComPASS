@@ -4,6 +4,10 @@ namespace ComPASS
 {
     public class Credits_etc
     {
+        //下記の略称
+        //COmputing Package of StatisticS
+
+
         //Credits
 
         // ChartDirector
