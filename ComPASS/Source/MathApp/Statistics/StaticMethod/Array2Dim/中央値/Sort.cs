@@ -12,18 +12,18 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 各要素を昇順で入れ替える
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="array2Dim"></param>
         /// <returns></returns>
-        static T[,] Sort(T[,] designMatrix)
+        static T[,] Sort(T[,] array2Dim)
         {
             //並べ替え用の配列。
             //design_matrixを計算に用いると参照渡しになるバグがある。
-            T[,] sorted = new T[designMatrix.GetLength(0), designMatrix.GetLength(1)];
-            for (int i = 0; i < designMatrix.GetLength(0); i++)
+            T[,] sorted = new T[array2Dim.GetLength(0), array2Dim.GetLength(1)];
+            for (int i = 0; i < array2Dim.GetLength(0); i++)
             {
-                for (int j = 0; j < designMatrix.GetLength(1); j++)
+                for (int j = 0; j < array2Dim.GetLength(1); j++)
                 {
-                    sorted[i, j] = designMatrix[i, j];
+                    sorted[i, j] = array2Dim[i, j];
                 }
             }
 

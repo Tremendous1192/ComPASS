@@ -11,18 +11,18 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 偏差平方和を返す.
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="array2Dim"></param>
         /// <returns></returns>
-        public static T[] SumOfSquaredDeviations(T[,] designMatrix)
+        public static T[] SumOfSquaredDeviations(T[,] array2Dim)
         {
-            T[] simpleSum = Statistics<T>.SimpleSum(designMatrix);
-            T[] sumOfSquares = Statistics<T>.SumOfSquares(designMatrix);
+            T[] simpleSum = Statistics<T>.SimpleSum(array2Dim);
+            T[] sumOfSquares = Statistics<T>.SumOfSquares(array2Dim);
 
-            T[] sumOfSquaredDeviations = new T[designMatrix.GetLength(1)];
+            T[] sumOfSquaredDeviations = new T[array2Dim.GetLength(1)];
 
-            int n = designMatrix.GetLength(0);
+            int n = array2Dim.GetLength(0);
 
-            for (int j = 0; j < designMatrix.GetLength(1); j++)
+            for (int j = 0; j < array2Dim.GetLength(1); j++)
             {
                 sumOfSquaredDeviations[j] = (dynamic)sumOfSquares[j] - (dynamic)simpleSum[j] * simpleSum[j] / n;
             }

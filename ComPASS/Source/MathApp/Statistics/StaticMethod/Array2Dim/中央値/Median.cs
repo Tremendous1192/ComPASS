@@ -11,12 +11,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 中央値を計算する
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="array2Dim"></param>
         /// <returns></returns>
-        public static T[] Median(T[,] designMatrix)
+        public static T[] Median(T[,] array2Dim)
         {
             //昇順に並べ替えた配列。
-            T[,] sorted = Statistics<T>.Sort(designMatrix);
+            T[,] sorted = Statistics<T>.Sort(array2Dim);
 
             T[] median = new T[sorted.GetLength(1)];
 

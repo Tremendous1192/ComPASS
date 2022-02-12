@@ -11,12 +11,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 不偏分散を返す.
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="array2Dim"></param>
         /// <returns></returns>
-        public static T[] UnbiasedSampleVariance(T[,] designMatrix)
+        public static T[] UnbiasedSampleVariance(T[,] array2Dim)
         {
-            T[] unbiasedSampleVariance = Statistics<T>.SumOfSquaredDeviations(designMatrix);
-            int nMinus1 = designMatrix.GetLength(0) - 1;
+            T[] unbiasedSampleVariance = Statistics<T>.SumOfSquaredDeviations(array2Dim);
+            int nMinus1 = array2Dim.GetLength(0) - 1;
 
             for (int j = 0; j < unbiasedSampleVariance.Length; j++)
             {

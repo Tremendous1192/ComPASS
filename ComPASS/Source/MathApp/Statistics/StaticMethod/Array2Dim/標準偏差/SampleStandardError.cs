@@ -11,14 +11,14 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 標準誤差を返す。
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="array2Dim"></param>
         /// <returns></returns>
-        public static T[] SampleStandardError(T[,] designMatrix)
+        public static T[] SampleStandardError(T[,] array2Dim)
         {
-            T dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)designMatrix.GetLength(0));
-            T[] standardError = Statistics<T>.SampleStandardDeviation(designMatrix);
+            T dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)array2Dim.GetLength(0));
+            T[] standardError = Statistics<T>.SampleStandardDeviation(array2Dim);
 
-            for (int j = 0; j < designMatrix.GetLength(1); j++)
+            for (int j = 0; j < array2Dim.GetLength(1); j++)
             {
                 standardError[j] /= (dynamic)dataNumberSQRT;
             }

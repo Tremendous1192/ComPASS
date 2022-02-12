@@ -12,12 +12,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 標本平均を計算する。
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="array2Dim"></param>
         /// <returns></returns>
-        public static T[] SampleMean(T[,] designMatrix)
+        public static T[] SampleMean(T[,] array2Dim)
         {
-            T[] sampleMean = Statistics<T>.SimpleSum(designMatrix);
-            int n = designMatrix.GetLength(0);
+            T[] sampleMean = Statistics<T>.SimpleSum(array2Dim);
+            int n = array2Dim.GetLength(0);
 
             for (int j = 0; j < sampleMean.Length; j++)
             {

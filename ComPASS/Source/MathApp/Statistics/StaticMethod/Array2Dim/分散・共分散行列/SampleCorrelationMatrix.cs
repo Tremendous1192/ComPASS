@@ -11,15 +11,15 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 標本相関係数行列を返す
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="array2Dim"></param>
         /// <returns></returns>
-        public static T[,] SampleCorrelationMatrix(T[,] designMatrix)
+        public static T[,] SampleCorrelationMatrix(T[,] array2Dim)
         {
             //標本分散・共分散行列
-            T[,] correlationMatrix = Statistics<T>.SampleVarianceCovarianceMatrix(designMatrix);
+            T[,] correlationMatrix = Statistics<T>.SampleVarianceCovarianceMatrix(array2Dim);
 
             //標準偏差計算する
-            T[] std = new T[designMatrix.GetLength(1)];
+            T[] std = new T[array2Dim.GetLength(1)];
             for (int j = 0; j < correlationMatrix.GetLength(0); j++)
             {
                 std[j] = Math.Sqrt((dynamic)correlationMatrix[j, j]);

@@ -20,12 +20,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// [8,*] 標本標準偏差
         /// [9,*] 標本標準誤差
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="array2Dim"></param>
         /// <returns></returns>
-        public static T[,] Summary(T[,] designMatrix)
+        public static T[,] Summary(T[,] array2Dim)
         {
             //昇順に並べ替えた配列。
-            T[,] sorted = Statistics<T>.Sort(designMatrix);
+            T[,] sorted = Statistics<T>.Sort(array2Dim);
 
             //解析結果
             T[,] summary = new T[10, sorted.GetLength(1)];
@@ -78,14 +78,14 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             }
 
             //[5,*] 平均値
-            T[] mean = Statistics<T>.SampleMean(designMatrix);
+            T[] mean = Statistics<T>.SampleMean(array2Dim);
             for (int j = 0; j < mean.Length; j++)
             {
                 summary[5, j] = mean[j];
             }
 
             //[6,*] 偏差平方和
-            T[] unbiasedSampleVariance = Statistics<T>.UnbiasedSampleVariance(designMatrix);
+            T[] unbiasedSampleVariance = Statistics<T>.UnbiasedSampleVariance(array2Dim);
             for (int j = 0; j < unbiasedSampleVariance.Length; j++)
             {
                 summary[6, j] = unbiasedSampleVariance[j];
@@ -94,9 +94,9 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             //[7,*] 不偏標本分散
             //[8,*] 標本標準偏差
             //[9,*] 標本標準誤差
-            int nMinus1 = designMatrix.GetLength(0) - 1;
-            double dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)designMatrix.GetLength(0));
-            for (int k = 0; k < designMatrix.GetLength(1); k++)
+            int nMinus1 = array2Dim.GetLength(0) - 1;
+            double dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)array2Dim.GetLength(0));
+            for (int k = 0; k < array2Dim.GetLength(1); k++)
             {
                 summary[7, k] = (dynamic)summary[6, k] / nMinus1;
                 summary[8, k] = (dynamic)Math.Sqrt((dynamic)summary[7, k]);

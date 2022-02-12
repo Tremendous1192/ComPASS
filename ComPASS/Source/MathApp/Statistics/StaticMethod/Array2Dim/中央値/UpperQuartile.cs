@@ -12,13 +12,13 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 第3四分位数を計算する。
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="desarray2DimgnMatrix"></param>
         /// <returns></returns>
-        public static T[] UpperQuartile(T[,] designMatrix)
+        public static T[] UpperQuartile(T[,] desarray2DimgnMatrix)
         {
             //並べ替え用の配列。
             //design_matrixを計算に用いると参照渡しになるバグがある。
-            T[,] sorted = Statistics<T>.Sort(designMatrix);
+            T[,] sorted = Statistics<T>.Sort(desarray2DimgnMatrix);
 
             T[] upperQuartile = new T[sorted.GetLength(1)];
 

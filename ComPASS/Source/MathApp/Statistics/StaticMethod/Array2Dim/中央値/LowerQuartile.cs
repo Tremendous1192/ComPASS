@@ -13,12 +13,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 四分位数を返す.
         /// </summary>
-        /// <param name="designMatrix"></param>
+        /// <param name="array2Dim"></param>
         /// <returns></returns>
-        public static T[] LowerQuartile(T[,] designMatrix)
+        public static T[] LowerQuartile(T[,] array2Dim)
         {
             //昇順に並べ替えた配列。
-            T[,] sorted = Statistics<T>.Sort(designMatrix);
+            T[,] sorted = Statistics<T>.Sort(array2Dim);
 
             T[] lowerQuartile = new T[ sorted.GetLength(1)];
 
