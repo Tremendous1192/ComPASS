@@ -20,7 +20,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
 
             int n = columnVector.Dimension;
 
-            return (dynamic)sumOfSquares - (dynamic)sumOfSquares * sumOfSquares / n;
+            return (dynamic)sumOfSquares - (dynamic)simpleSum * simpleSum / n;
         }
 
 

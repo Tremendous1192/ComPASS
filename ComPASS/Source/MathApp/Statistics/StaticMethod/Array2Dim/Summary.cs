@@ -22,7 +22,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="designMatrix"></param>
         /// <returns></returns>
-        public static Matrix<T> Summary(Matrix<T> designMatrix)
+        public static T[,] Summary(T[,] designMatrix)
         {
             //昇順に並べ替えた配列。
             T[,] sorted = Statistics<T>.Sort(designMatrix);
@@ -78,15 +78,15 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             }
 
             //[5,*] 平均値
-            RowVector<T> mean = Statistics<T>.SampleMean(designMatrix);
-            for (int j = 0; j < mean.Dimension; j++)
+            T[] mean = Statistics<T>.SampleMean(designMatrix);
+            for (int j = 0; j < mean.Length; j++)
             {
                 summary[5, j] = mean[j];
             }
 
             //[6,*] 偏差平方和
-            RowVector<T> unbiasedSampleVariance = Statistics<T>.UnbiasedSampleVariance(designMatrix);
-            for (int j = 0; j < unbiasedSampleVariance.Dimension; j++)
+            T[] unbiasedSampleVariance = Statistics<T>.UnbiasedSampleVariance(designMatrix);
+            for (int j = 0; j < unbiasedSampleVariance.Length; j++)
             {
                 summary[6, j] = unbiasedSampleVariance[j];
             }
@@ -94,16 +94,16 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             //[7,*] 不偏標本分散
             //[8,*] 標本標準偏差
             //[9,*] 標本標準誤差
-            int nMinus1 = designMatrix.RowCount - 1;
-            double dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)designMatrix.RowCount);
-            for (int k = 0; k < designMatrix.ColumnCount; k++)
+            int nMinus1 = designMatrix.GetLength(0) - 1;
+            double dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)designMatrix.GetLength(0));
+            for (int k = 0; k < designMatrix.GetLength(1); k++)
             {
                 summary[7, k] = (dynamic)summary[6, k] / nMinus1;
                 summary[8, k] = (dynamic)Math.Sqrt((dynamic)summary[7, k]);
                 summary[9, k] = (dynamic)summary[8, k] / dataNumberSQRT;
             }
 
-            return new Matrix<T>(summary);
+            return summary;
         }
 
 
