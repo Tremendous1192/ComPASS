@@ -11,14 +11,14 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 各要素の和を返す.
         /// </summary>
-        /// <param name="columnVector"></param>
+        /// <param name="array1Dim"></param>
         /// <returns></returns>
-        public static T SimpleSum(T[] columnVector)
+        public static T SimpleSum(T[] array1Dim)
         {
             T simpleSum = (dynamic)0;
-            for (int i = 0; i < columnVector.Length; i++)
+            for (int i = 0; i < array1Dim.Length; i++)
             {
-                simpleSum += (dynamic)columnVector[i];
+                simpleSum += (dynamic)array1Dim[i];
             }
 
             return simpleSum;

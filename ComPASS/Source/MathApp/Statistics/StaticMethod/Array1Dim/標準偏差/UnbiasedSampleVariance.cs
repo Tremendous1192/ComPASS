@@ -11,12 +11,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 不偏分散を返す.
         /// </summary>
-        /// <param name="columnVector"></param>
+        /// <param name="array1Dim"></param>
         /// <returns></returns>
-        public static T UnbiasedSampleVariance(T[] columnVector)
+        public static T UnbiasedSampleVariance(T[] array1Dim)
         {
-            int nMinus1 = columnVector.Length - 1;
-            return (dynamic)Statistics<T>.SumOfSquaredDeviations(columnVector) / nMinus1;
+            int nMinus1 = array1Dim.Length - 1;
+            return (dynamic)Statistics<T>.SumOfSquaredDeviations(array1Dim) / nMinus1;
         }
 
 

@@ -12,11 +12,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 標本平均を計算する。
         /// </summary>
-        /// <param name="columnVector"></param>
+        /// <param name="array1Dim"></param>
         /// <returns></returns>
-        public static T SampleMean(T[] columnVector)
+        public static T SampleMean(T[] array1Dim)
         {
-            return (dynamic)Statistics<T>.SimpleSum(columnVector) / columnVector.Length;
+            return (dynamic)Statistics<T>.SimpleSum(array1Dim) / array1Dim.Length;
         }
 
 

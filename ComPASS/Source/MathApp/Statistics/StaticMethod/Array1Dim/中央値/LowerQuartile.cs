@@ -10,12 +10,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 四分位数を返す.
         /// </summary>
-        /// <param name="columnVector"></param>
+        /// <param name="array1Dim"></param>
         /// <returns></returns>
-        public static T LowerQuartile(T[] columnVector)
+        public static T LowerQuartile(T[] array1Dim)
         {
             //昇順に並べ替えた配列。
-            T[] sorted = Statistics<T>.Sort(columnVector);
+            T[] sorted = Statistics<T>.Sort(array1Dim);
 
             //四分位数は、要素数を4で割ったときのあまりで計算が異なる。
             int lowerQuartilePoint = sorted.GetLength(0) / 4;

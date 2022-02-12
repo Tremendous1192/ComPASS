@@ -20,12 +20,12 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// [8] 標本標準偏差
         /// [9] 標本標準誤差
         /// </summary>
-        /// <param name="columnVector"></param>
+        /// <param name="array1Dim"></param>
         /// <returns></returns>
-        public static T[] Summary(T[] columnVector)
+        public static T[] Summary(T[] array1Dim)
         {
             //昇順に並べ替えた配列。
-            T[] sorted = Statistics<T>.Sort(columnVector);
+            T[] sorted = Statistics<T>.Sort(array1Dim);
 
             //解析結果
             T[] summary = new T[10];
@@ -63,18 +63,18 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             }
 
             //[5] 平均値
-            T mean = Statistics<T>.SampleMean(columnVector);
+            T mean = Statistics<T>.SampleMean(array1Dim);
             summary[5] = mean;
 
             //[6] 偏差平方和
-            T unbiasedSampleVariance = Statistics<T>.UnbiasedSampleVariance(columnVector);
+            T unbiasedSampleVariance = Statistics<T>.UnbiasedSampleVariance(array1Dim);
             summary[6] = unbiasedSampleVariance;
 
             //[7] 不偏標本分散
             //[8] 標本標準偏差
             //[9] 標本標準誤差
-            int nMinus1 = columnVector.Length - 1;
-            double dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)columnVector.Length);
+            int nMinus1 = array1Dim.Length - 1;
+            double dataNumberSQRT = (dynamic)Math.Sqrt((dynamic)array1Dim.Length);
             summary[7] = (dynamic)summary[6] / nMinus1;
             summary[8] = (dynamic)Math.Sqrt((dynamic)summary[7]);
             summary[9] = (dynamic)summary[8] / dataNumberSQRT;

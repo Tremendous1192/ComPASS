@@ -11,11 +11,11 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 標準偏差を返す。
         /// </summary>
-        /// <param name="columnVector"></param>
+        /// <param name="array1Dim"></param>
         /// <returns></returns>
-        public static T SampleStandardDeviation(T[] columnVector)
+        public static T SampleStandardDeviation(T[] array1Dim)
         {
-            T sampleStandardDeviation = Statistics<T>.UnbiasedSampleVariance(columnVector);
+            T sampleStandardDeviation = Statistics<T>.UnbiasedSampleVariance(array1Dim);
             return (dynamic)Math.Sqrt((dynamic)sampleStandardDeviation);
         }
 

@@ -11,15 +11,15 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 第3四分位数を計算する。
         /// </summary>
-        /// <param name="columnVector"></param>
+        /// <param name="array1Dim"></param>
         /// <returns></returns>
-        public static T UpperQuartile(T[] columnVector)
+        public static T UpperQuartile(T[] array1Dim)
         {
             //並べ替え用の配列。
             //design_matrixを計算に用いると参照渡しになるバグがある。
-            T[] sorted = Statistics<T>.Sort(columnVector);
+            T[] sorted = Statistics<T>.Sort(array1Dim);
 
-            T upperQuartile = columnVector[0];
+            T upperQuartile = array1Dim[0];
             //第3四分位数は、要素数を4で割ったときのあまりで計算が異なる。
             int upperQuartilePoint = Math.Max(sorted.GetLength(0) - sorted.GetLength(0) / 4, 0);
             if (sorted.GetLength(0) % 4 < 2)

@@ -12,17 +12,17 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 各要素を昇順で入れ替える
         /// </summary>
-        /// <param name="columnVector"></param>
+        /// <param name="array1Dim"></param>
         /// <returns></returns>
-        static T[] Sort(T[] columnVector)
+        static T[] Sort(T[] array1Dim)
         {
 
             //並べ替え用の配列。
             //design_matrixを計算に用いると参照渡しになるバグがある。
-            T[] sorted = new T[columnVector.Length];
-            for (int i = 0; i < columnVector.Length; i++)
+            T[] sorted = new T[array1Dim.Length];
+            for (int i = 0; i < array1Dim.Length; i++)
             {
-                sorted[i] = columnVector[i];
+                sorted[i] = array1Dim[i];
             }
 
             //昇順に並び替える

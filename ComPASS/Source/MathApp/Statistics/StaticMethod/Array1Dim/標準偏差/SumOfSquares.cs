@@ -12,14 +12,14 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// <summary>
         /// 各要素の自乗の和を返す.
         /// </summary>
-        /// <param name="columnVector"></param>
+        /// <param name="array1Dim"></param>
         /// <returns></returns>
-        public static T SumOfSquares(T[] columnVector)
+        public static T SumOfSquares(T[] array1Dim)
         {
             T sumOfSquares = (dynamic)0;
-            for (int i = 0; i < columnVector.Length; i++)
+            for (int i = 0; i < array1Dim.Length; i++)
             {
-                sumOfSquares += (dynamic)columnVector[i] * columnVector[i];
+                sumOfSquares += (dynamic)array1Dim[i] * array1Dim[i];
             }
 
             return sumOfSquares;
