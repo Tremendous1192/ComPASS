@@ -1301,230 +1301,230 @@
             <summary>
             標本平均を計算する。
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Summary(`0[])">
             <summary>
             基本的な統計量を返す.
-            [0] 最小値
-            [1] 第一四分位数
-            [2] 中央値
-            [3] 第三四分位数
-            [4] 最大値
-            [5] 平均値
-            [6] 偏差平方和
-            [7] 不偏標本分散
-            [8] 標本標準偏差
+            [0] 最小値,  
+            [1] 第一四分位数,  
+            [2] 中央値, 
+            [3] 第三四分位数, 
+            [4] 最大値,  
+            [5] 平均値,  
+            [6] 偏差平方和,  
+            [7] 不偏標本分散,  
+            [8] 標本標準偏差,  
             [9] 標本標準誤差
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.LowerQuartile(`0[])">
             <summary>
             四分位数を返す.
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Maximum(`0[])">
             <summary>
             最大値を返す.
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Median(`0[])">
             <summary>
             中央値を計算する
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Minimum(`0[])">
             <summary>
             最小値を返す
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Sort(`0[])">
             <summary>
             各要素を昇順で入れ替える
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.UpperQuartile(`0[])">
             <summary>
             第3四分位数を計算する。
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleStandardDeviation(`0[])">
             <summary>
             標準偏差を返す。
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleStandardError(`0[])">
             <summary>
             標準誤差を返す。
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SimpleSum(`0[])">
             <summary>
             各要素の和を返す.
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SumOfSquaredDeviations(`0[])">
             <summary>
             偏差平方和を返す.
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SumOfSquares(`0[])">
             <summary>
             各要素の自乗の和を返す.
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.UnbiasedSampleVariance(`0[])">
             <summary>
             不偏分散を返す.
             </summary>
-            <param name="columnVector"></param>
+            <param name="array1Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleMean(`0[0:,0:])">
             <summary>
             標本平均を計算する。
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Summary(`0[0:,0:])">
             <summary>
             基本的な統計量を返す.
-            [0,*] 最小値
-            [1,*] 第一四分位数
-            [2,*] 中央値
-            [3,*] 第三四分位数
-            [4,*] 最大値
-            [5,*] 平均値
-            [6,*] 偏差平方和
-            [7,*] 不偏標本分散
-            [8,*] 標本標準偏差
+            [0,*] 最小値,  
+            [1,*] 第一四分位数,  
+            [2,*] 中央値,  
+            [3,*] 第三四分位数,  
+            [4,*] 最大値,  
+            [5,*] 平均値,  
+            [6,*] 偏差平方和,  
+            [7,*] 不偏標本分散,  
+            [8,*] 標本標準偏差,  
             [9,*] 標本標準誤差
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.LowerQuartile(`0[0:,0:])">
             <summary>
             四分位数を返す.
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Maximum(`0[0:,0:])">
             <summary>
             最大値を返す.
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Median(`0[0:,0:])">
             <summary>
             中央値を計算する
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Minimum(`0[0:,0:])">
             <summary>
             最小値を返す
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Sort(`0[0:,0:])">
             <summary>
             各要素を昇順で入れ替える
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.UpperQuartile(`0[0:,0:])">
             <summary>
             第3四分位数を計算する。
             </summary>
-            <param name="designMatrix"></param>
+            <param name="desarray2DimgnMatrix"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleCorrelationMatrix(`0[0:,0:])">
             <summary>
             標本相関係数行列を返す
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleVarianceCovarianceMatrix(`0[0:,0:])">
             <summary>
             標本分散・標本共分散行列を計算する
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleStandardDeviation(`0[0:,0:])">
             <summary>
             標準偏差を返す。
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleStandardError(`0[0:,0:])">
             <summary>
             標準誤差を返す。
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SimpleSum(`0[0:,0:])">
             <summary>
             各要素の和を返す.
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SumOfSquaredDeviations(`0[0:,0:])">
             <summary>
             偏差平方和を返す.
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SumOfSquares(`0[0:,0:])">
             <summary>
             各要素の自乗の和を返す.
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.UnbiasedSampleVariance(`0[0:,0:])">
             <summary>
             不偏分散を返す.
             </summary>
-            <param name="designMatrix"></param>
+            <param name="array2Dim"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleMean(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
@@ -1537,15 +1537,15 @@
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Summary(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             基本的な統計量を返す.
-            [0] 最小値
-            [1] 第一四分位数
-            [2] 中央値
-            [3] 第三四分位数
-            [4] 最大値
-            [5] 平均値
-            [6] 偏差平方和
-            [7] 不偏標本分散
-            [8] 標本標準偏差
+            [0] 最小値,  
+            [1] 第一四分位数,  
+            [2] 中央値,  
+            [3] 第三四分位数,  
+            [4] 最大値,  
+            [5] 平均値,  
+            [6] 偏差平方和,  
+            [7] 不偏標本分散,  
+            [8] 標本標準偏差,  
             [9] 標本標準誤差
             </summary>
             <param name="columnVector"></param>
@@ -1645,15 +1645,15 @@
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.Summary(Tremendous1192.SelfEmployed.CoMPASS.MathApp.Matrix{`0})">
             <summary>
             基本的な統計量を返す.
-            [0,*] 最小値
-            [1,*] 第一四分位数
-            [2,*] 中央値
-            [3,*] 第三四分位数
-            [4,*] 最大値
-            [5,*] 平均値
-            [6,*] 偏差平方和
-            [7,*] 不偏標本分散
-            [8,*] 標本標準偏差
+            [0,*] 最小値,  
+            [1,*] 第一四分位数,  
+            [2,*] 中央値,  
+            [3,*] 第三四分位数,  
+            [4,*] 最大値,  
+            [5,*] 平均値,  
+            [6,*] 偏差平方和,  
+            [7,*] 不偏標本分散,  
+            [8,*] 標本標準偏差,  
             [9,*] 標本標準誤差
             </summary>
             <param name="designMatrix"></param>
