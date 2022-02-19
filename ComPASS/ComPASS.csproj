@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="SandBox\" />
     <Folder Include="Test\IOApp\IOTypeChange\" />
     <Folder Include="Test\OtherNuGet\ScottPlot\" />
   </ItemGroup>
