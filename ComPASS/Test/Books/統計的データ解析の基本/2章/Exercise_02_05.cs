@@ -12,6 +12,9 @@ using System.IO;
 //ChartDirectorのクレジットを記入する
 using Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet;
 
+//ScottPlotを使用する.
+using ScottPlot;
+using System.Linq;
 
 namespace Test.Tremendous1192.SelfEmployed.CoMPASS.Books
 {
@@ -243,82 +246,39 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.Books
 
             Console.WriteLine("");
             Console.WriteLine("しかし,握力は整数値であり,データ数も120個あるので,階級幅を1[kg]としてヒストグラムを作成しても差支えないだろう.");
+            // min 20,  max 70
             Console.WriteLine("ヒストグラムの表示範囲を  [" + rangeMin + ", " + rangeMax + "]とする.");
-
-
-            // ラベルを作成する.
-            string[] labels = new string[length];
-            for (int i = 0; i < length; i++)
-            {
-                if ((rangeMin + i) % 5 == 0)
-                {
-                    labels[i] = (rangeMin + i).ToString();
-                }
-            }
-
-            //  度数を計算する.
-            double[] frequency = new double[length];
-            for (int i=0;i<sorted.Length;i++)
-            {
-                frequency[(int)(sorted[i] - rangeMin)] += 1;
-                //Console.WriteLine(i + "\t" + sorted[i] + "\t" + (sorted[i] - rangeMin));
-            }
-
 
 
             //=============================================================
             //    グラフを描画する
             //=============================================================
 
+            //キャンバスを作成する.
+            var plt = new ScottPlot.Plot(640, 480);
 
-            // 大きさ640 x 480のグラフを作成する。
-            XYChart xYChart = new XYChart(640, 480);
-
-            // 位置(50, 0)から大きさ540 x 380 pxで、背景がLightYellow(0xFFFFE0)のチャートを作成する。
-            xYChart.setPlotArea(50, 50, 640 - 50 - 50, 480 - 50 - 50, 0xFFFFE0);
-
-            // グラフのタイトルを加える
-            xYChart.addTitle(0, "統計的データ解析の基本 第2章 演習問題5", "Arial Bold", 20);
-
-            // LimeGreen(0x32CD32)の棒グラフのレイヤー
-            BarLayer barLayer = xYChart.addBarLayer(frequency, 0x32CD32, "握力の度数");
-
-            // 棒グラフの間隔を詰める
-            barLayer.setBarGap(Chart.TouchBar);
-
-            // 3Dの装飾を加える
-            barLayer.setBorderColor(-1, 1);
-
-            // y軸のラベルのフォントをArial Boldにする
-            xYChart.yAxis().setLabelStyle("Arial Bold");
-            xYChart.yAxis().setTitle("度数", "Arial Bold", 12);
-
-            // x軸のラベルを設定する
-            ChartDirector.TextBox tb = xYChart.xAxis().setLabels(labels);
-            xYChart.xAxis().setTitle("握力", "Arial Bold", 12);
-
-            // ラベルは中央揃えにする。
-            tb.setAlignment(Chart.Center);
+            // タイトルを加える
+            plt.Title("統計的データ解析の基本 第2章 演習問題5");
 
 
+            // create a histogram
+            (double[] counts, double[] binEdges) = ScottPlot.Statistics.Common.Histogram(rawDataArray, min: 20, max: 70, binSize: 1);
+            double[] leftEdges = binEdges.Take(binEdges.Length - 1).ToArray();
+
+            // display the histogram counts as a bar plot
+            var bar = plt.AddBar(values: counts, positions: leftEdges);
+            bar.BarWidth = 1;
+
+            // customize the plot style
+            plt.YAxis.Label("Count (#)");
+            plt.XAxis.Label("握力 (kg)");
+            plt.SetAxisLimits(yMin: 0);
+
+            //グラフを保存する.
             string current = System.IO.Directory.GetCurrentDirectory();
             //Console.WriteLine("現在のディレクトリ\t" + current);
             string fileName = "統計的データ解析の基本 第2章 演習問題5.png";
-            //Console.WriteLine("ファイル名\t" + fileName);
-            //Console.WriteLine("フルパス\t" + Path.Combine(current, fileName));
-
-            //グラフを画像として保存する。
-            xYChart.makeChart(Path.Combine(current, fileName));
-
-
-            Console.WriteLine("");
-            Console.WriteLine("ヒストグラムの画像を,本メソッドを実行するファイルのディレクトリに保存した.");
-            Console.WriteLine("");
-
-
-            ChartDirectorTest.NoteCredits();
-
-
+            plt.SaveFig(Path.Combine(current, fileName));
 
         }
 
