@@ -18,7 +18,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.Books
     public partial class BasicOfStatisticalDataAnalysis
     {
 
-        public void Exercise_2_4()
+        public void Exercise_2_5()
         {
             BasicOfStatisticalDataAnalysis.Quote();
 
