@@ -12,11 +12,13 @@
   <ItemGroup>
     <PackageReference Include="ChartDirector.Net" Version="7.0.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="ScottPlot" Version="4.1.33" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Test\IOApp\IOTypeChange\" />
+    <Folder Include="Test\OtherNuGet\ScottPlot\" />
   </ItemGroup>
 
 </Project>

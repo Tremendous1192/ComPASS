@@ -23,7 +23,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.Books
             BasicOfStatisticalDataAnalysis.Quote();
 
             Console.Write("第2章 単一変数データの記述統計量と視覚的表現");
-            Console.WriteLine("演習問題4を解きます。");
+            Console.WriteLine("演習問題5を解きます。");
             Console.WriteLine("引用(数式は改変)\n");
 
             Console.WriteLine("下記は,文部科学省体力・運動能力調査(平成29年度)における18歳男子の握力測定結果(単位:kg)  n = 1042, xBar = 40.98," +
@@ -278,7 +278,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.Books
             xYChart.setPlotArea(50, 50, 640 - 50 - 50, 480 - 50 - 50, 0xFFFFE0);
 
             // グラフのタイトルを加える
-            xYChart.addTitle(0, "統計的データ解析の基本 第2章 演習問題4", "Arial Bold", 20);
+            xYChart.addTitle(0, "統計的データ解析の基本 第2章 演習問題5", "Arial Bold", 20);
 
             // LimeGreen(0x32CD32)の棒グラフのレイヤー
             BarLayer barLayer = xYChart.addBarLayer(frequency, 0x32CD32, "握力の度数");
@@ -303,7 +303,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.Books
 
             string current = System.IO.Directory.GetCurrentDirectory();
             //Console.WriteLine("現在のディレクトリ\t" + current);
-            string fileName = "統計的データ解析の基本 第2章 演習問題4.png";
+            string fileName = "統計的データ解析の基本 第2章 演習問題5.png";
             //Console.WriteLine("ファイル名\t" + fileName);
             //Console.WriteLine("フルパス\t" + Path.Combine(current, fileName));
 
