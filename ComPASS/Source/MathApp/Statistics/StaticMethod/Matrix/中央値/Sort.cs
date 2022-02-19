@@ -14,7 +14,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="designMatrix"></param>
         /// <returns></returns>
-        static T[,] Sort(Matrix<T> designMatrix)
+        public static T[,] Sort(Matrix<T> designMatrix)
         {
             //並べ替え用の配列。
             //design_matrixを計算に用いると参照渡しになるバグがある。

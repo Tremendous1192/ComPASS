@@ -14,7 +14,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="array2Dim"></param>
         /// <returns></returns>
-        static T[,] Sort(T[,] array2Dim)
+        public static T[,] Sort(T[,] array2Dim)
         {
             //並べ替え用の配列。
             //design_matrixを計算に用いると参照渡しになるバグがある。

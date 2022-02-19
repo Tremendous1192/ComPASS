@@ -14,7 +14,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="columnVector"></param>
         /// <returns></returns>
-        static T[] Sort(ColumnVector<T> columnVector)
+        public static T[] Sort(ColumnVector<T> columnVector)
         {
 
             //並べ替え用の配列。

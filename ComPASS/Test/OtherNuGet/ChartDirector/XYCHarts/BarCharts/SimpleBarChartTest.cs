@@ -55,6 +55,9 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet
             Console.WriteLine("グラフを保存します");
             xYChart.makeChart(Path.Combine(current, fileName));
 
+            Console.WriteLine("");
+            Console.WriteLine("ヒストグラムの画像を,本メソッドを実行するファイルのディレクトリに保存した.");
+            Console.WriteLine("");
 
 
             ChartDirectorTest.NoteCredits();

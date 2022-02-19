@@ -14,7 +14,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="array1Dim"></param>
         /// <returns></returns>
-        static T[] Sort(T[] array1Dim)
+        public static T[] Sort(T[] array1Dim)
         {
 
             //並べ替え用の配列。
