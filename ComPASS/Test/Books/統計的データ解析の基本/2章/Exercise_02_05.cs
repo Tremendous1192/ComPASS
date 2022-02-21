@@ -4,13 +4,9 @@ using System.Text;
 
 using Tremendous1192.SelfEmployed.CoMPASS.MathApp;
 
-//グラフを描画する
-using ChartDirector;
 //入出力
 using System.IO;
 
-//ChartDirectorのクレジットを記入する
-using Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet;
 
 //ScottPlotを使用する.
 using ScottPlot;

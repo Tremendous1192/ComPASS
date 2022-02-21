@@ -1917,25 +1917,5 @@
             ベクトルの加算のテスト.
             </summary>
         </member>
-        <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet.ChartDirectorTest.NoteCredits">
-            <summary>
-            ChartDirectorのクレジットをコンソールに記述する関数
-            </summary>
-        </member>
-        <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet.ChartDirectorTest.DualHorizontalBarChartsTest">
-            <summary>
-            2つの横向き棒グラフを並べて人口ピラミッドのグラフを作成して、png画像として保存するテスト関数
-            </summary>
-        </member>
-        <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet.ChartDirectorTest.SimpleBarChartTest">
-            <summary>
-            簡単な棒グラフのpng画像を作成するテスト関数
-            </summary>
-        </member>
-        <member name="M:Test.Tremendous1192.SelfEmployed.CoMPASS.OtherNuGet.ChartDirectorTest.ScatterChartTest">
-            <summary>
-            簡単な散布図を作成して、png画像として保存するテスト関数
-            </summary>
-        </member>
     </members>
 </doc>
