@@ -21,7 +21,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.Books
         {
             BasicOfStatisticalDataAnalysis.Quote();
 
-            Console.Write("第6章 正規分布と推測統計の基礎理論");
+            Console.Write("第6章 1つの母集団に関する統計的推定");
             Console.WriteLine("演習問題5を解きます。");
             Console.WriteLine("引用(数式は改変. 問題文を(a), (b)などで小分けにした)\n");
 
@@ -46,7 +46,7 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.Books
             Console.WriteLine("(f) 母分散σ^2 および母標準偏差σ の99%信頼区間を求めなさい.");
             Console.WriteLine("\n");
 
-            double number = 6;
+            double number = rawData.Length;
             double mean = Statistics<double>.SampleMean(rawData);
             double stdSample = Statistics<double>.SampleStandardDeviation(rawData);
 
