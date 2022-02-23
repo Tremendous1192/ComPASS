@@ -46,15 +46,13 @@ namespace Test.Tremendous1192.SelfEmployed.CoMPASS.Books
                 designMatrixArray[i, 1] = yArray[i];
             }
 
-            double[,] correlationMatrixArray = Statistics<double>.SampleCorrelationMatrix(designMatrixArray);
-
             Console.WriteLine("x" + "\t" + "y");
             for (int i=0;i<xArray.Length;i++)
             {
                 Console.WriteLine(xArray[i] + "\t" + yArray[i]);
             }
             Console.WriteLine("\n");
-            Console.WriteLine("相関係数" + correlationMatrixArray[0, 1]);
+            Console.WriteLine("相関係数 " + Statistics<double>.SampleCorrelation(xArray, yArray).ToString("G3"));
 
 
             //=============================================================

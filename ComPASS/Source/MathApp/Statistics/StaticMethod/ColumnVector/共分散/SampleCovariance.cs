@@ -13,7 +13,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="designMatrix"></param>
         /// <returns></returns>
-        public static T SampleVarianceCovarianceMatrix(ColumnVector<T> columnVector1, ColumnVector<T> columnVector2)
+        public static T SampleCovariance(ColumnVector<T> columnVector1, ColumnVector<T> columnVector2)
         {
 
             if (columnVector1.Dimension != columnVector2.Dimension)

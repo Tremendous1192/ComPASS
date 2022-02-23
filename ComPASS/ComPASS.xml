@@ -1363,14 +1363,14 @@
             <param name="array1Dim"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleCorrelationMatrix(`0[],`0[])">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleCorrelation(`0[],`0[])">
             <summary>
             標本相関係数行列を返す
             </summary>
             <param name="array2Dim"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleVarianceCovarianceMatrix(`0[],`0[])">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleCovariance(`0[],`0[])">
             <summary>
             標本分散・標本共分散行列を計算する
             </summary>
@@ -1607,14 +1607,14 @@
             <param name="columnVector"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleCorrelationMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleCorrelation(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             標本相関係数行列を返す
             </summary>
             <param name="designMatrix"></param>
             <returns></returns>
         </member>
-        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleVarianceCovarianceMatrix(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleCovariance(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
             <summary>
             標本分散・標本共分散行列を計算する
             </summary>

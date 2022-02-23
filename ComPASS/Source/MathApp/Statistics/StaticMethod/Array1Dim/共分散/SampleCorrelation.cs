@@ -13,7 +13,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
         /// </summary>
         /// <param name="array2Dim"></param>
         /// <returns></returns>
-        public static T SampleCorrelationMatrix(T[] array1, T[] array2)
+        public static T SampleCorrelation(T[] array1, T[] array2)
         {
             if (array1.Length != array2.Length)
             {
