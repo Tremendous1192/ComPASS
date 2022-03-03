@@ -28,7 +28,7 @@ namespace Tremendous1192.SelfEmployed.CoMPASS.MathApp
             double difference = (dynamic)summary1[6] - summary2[6];
             double std = Math.Sqrt((dynamic)std1 / group1.Dimension + (dynamic)std2 / group2.Dimension);
 
-            return new T[2] { difference - (dynamic)Kp * std, difference - (dynamic)Kp * std };
+            return new T[2] { difference - (dynamic)Kp * std, difference + (dynamic)Kp * std };
         }
 
     }

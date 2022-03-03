@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <Folder Include="SandBox\" />
-    <Folder Include="Test\Books\統計的データ解析の基本\8章\" />
     <Folder Include="Test\IOApp\IOTypeChange\" />
     <Folder Include="Test\OtherNuGet\ScottPlot\" />
   </ItemGroup>
