@@ -1379,16 +1379,27 @@
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.ExpectMeansDifference(`0[],`0[])">
             <summary>
-            母平均の差の点推定を行う.
+            母分散が既知の場合の, 母平均の差の点推定を行う.
             </summary>
             <param name="alpha"></param>
             <param name="group1"></param>
             <param name="group2"></param>
             <returns></returns>
         </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.ExpectMeansDifference(System.Double,`0[],`0[],`0,`0)">
+            <summary>
+            母分散が既知の場合の, 母平均の差の区間推定を行う.
+            </summary>
+            <param name="alpha"></param>
+            <param name="group1"></param>
+            <param name="group2"></param>
+            <param name="std1"></param>
+            <param name="std2"></param>
+            <returns></returns>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.TestMeansDifference(System.Double,`0[],`0[],`0,`0)">
             <summary>
-            母平均の差の検定を行う.
+            母分散が既知の場合の, 母平均の差の検定を行う.
             2群の母平均の差が 0 ではないことを検証する.
             </summary>
             <param name="alpha"></param>
@@ -1400,7 +1411,7 @@
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.TestMeansDifference(System.Double,`0[],`0[],`0,`0,System.Boolean)">
             <summary>
-            母平均の差の検定を行う.
+            母分散が既知の場合の, 母平均の差の検定を行う.
             group1MeanIsHiger に true を選択し場合, group1の母平均の方が大きいことを検証する.
             </summary>
             <param name="alpha"></param>
@@ -1652,6 +1663,50 @@
             標本分散・標本共分散行列を計算する
             </summary>
             <param name="designMatrix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.ExpectMeansDifference(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
+            <summary>
+            母分散が既知の場合の, 母平均の差の点推定を行う.
+            </summary>
+            <param name="alpha"></param>
+            <param name="group1"></param>
+            <param name="group2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.ExpectMeansDifference(System.Double,Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},`0,`0)">
+            <summary>
+            母分散が既知の場合の, 母平均の差の区間推定を行う.
+            </summary>
+            <param name="alpha"></param>
+            <param name="group1"></param>
+            <param name="group2"></param>
+            <param name="std1"></param>
+            <param name="std2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.TestMeansDifference(System.Double,Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},`0,`0)">
+            <summary>
+            母分散が既知の場合の, 母平均の差の検定を行う.
+            2群の母平均の差が 0 ではないことを検証する.
+            </summary>
+            <param name="alpha"></param>
+            <param name="group1"></param>
+            <param name="group2"></param>
+            <param name="std1"></param>
+            <param name="std2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.TestMeansDifference(System.Double,Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0},`0,`0,System.Boolean)">
+            <summary>
+            母分散が既知の場合の, 母平均の差の検定を行う.
+            group1MeanIsHiger に true を選択し場合, group1の母平均の方が大きいことを検証する.
+            </summary>
+            <param name="alpha"></param>
+            <param name="group1"></param>
+            <param name="group2"></param>
+            <param name="std1"></param>
+            <param name="std2"></param>
             <returns></returns>
         </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleStandardDeviation(Tremendous1192.SelfEmployed.CoMPASS.MathApp.ColumnVector{`0})">
