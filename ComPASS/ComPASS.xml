@@ -1377,6 +1377,39 @@
             <param name="array2Dim"></param>
             <returns></returns>
         </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.ExpectMeansDifference(`0[],`0[])">
+            <summary>
+            母平均の差の点推定を行う.
+            </summary>
+            <param name="alpha"></param>
+            <param name="group1"></param>
+            <param name="group2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.TestMeansDifference(System.Double,`0[],`0[],`0,`0)">
+            <summary>
+            母平均の差の検定を行う.
+            2群の母平均の差が 0 ではないことを検証する.
+            </summary>
+            <param name="alpha"></param>
+            <param name="group1"></param>
+            <param name="group2"></param>
+            <param name="std1"></param>
+            <param name="std2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.TestMeansDifference(System.Double,`0[],`0[],`0,`0,System.Boolean)">
+            <summary>
+            母平均の差の検定を行う.
+            group1MeanIsHiger に true を選択し場合, group1の母平均の方が大きいことを検証する.
+            </summary>
+            <param name="alpha"></param>
+            <param name="group1"></param>
+            <param name="group2"></param>
+            <param name="std1"></param>
+            <param name="std2"></param>
+            <returns></returns>
+        </member>
         <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.SampleStandardDeviation(`0[])">
             <summary>
             標準偏差を返す。
@@ -1783,6 +1816,24 @@
             不偏分散を返す.
             </summary>
             <param name="designMatrix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.TableOfNormalDistribution_1Side_PValuetoKp(System.Double)">
+            <summary>
+            正規分布表の片側分布を計算して,  
+            p値から統計量Kpを計算する.
+            統計量の有効数字は4桁なので, doubleで返しても良いだろう.
+            </summary>
+            <param name="pValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tremendous1192.SelfEmployed.CoMPASS.MathApp.Statistics`1.TableOfNormalDistribution_2Side_PValuetoKp(System.Double)">
+            <summary>
+            正規分布表の両側分布を計算して,  
+            p値から統計量Kpを計算する.
+            統計量の有効数字は4桁なので, doubleで返しても良いだろう.
+            </summary>
+            <param name="pValue"></param>
             <returns></returns>
         </member>
         <member name="T:Test.Tremendous1192.SelfEmployed.CoMPASS.Books.BasicOfStatisticalDataAnalysis">
